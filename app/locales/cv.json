@@ -1,0 +1,172 @@
+{
+  "basics": {
+    "name": "Cristhian Quiñonez Chiriboga",
+    "label": "Front-End Developer",
+    "image": "./src/assets/foto-perfil.webp",
+    "email": "crisrobin-95@hotmail.com",
+    "phone": "+34 629913434",
+    "url": "https://midu.dev",
+    "summary": "Me llamo Cristhian Quiñonez, vivo en Madrid. Hace más o menos dos año decidí cambiar mi profesión de cocina al mundo del desarrollo. Me apunte al grado superior de Desarrollo de Aplicaciones Web y lo finalice en junio del 2025. Estoy buscando alguna oportunidad para poder aprender, ganar experiencia y sobretodo dedicar todo mí tiempo a desarrollar proyectos.",
+    "location": {
+      "address": "",
+      "postalCode": "28260",
+      "city": "Madrid",
+      "countryCode": "ES",
+      "region": "España"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Cristhian Quiñonez",
+        "url": "https://www.linkedin.com/in/cristhianquiñonez"
+      },
+      {
+        "network": "GitHub",
+        "username": "crisrobin",
+        "url": "https://github.com/crisrobin95"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Alebat Education",
+      "position": "Practicas",
+      "url": "",
+      "startDate": "2025-03-24",
+      "endDate": "2025-06-04",
+      "summary": "Durante las practicas llevamos acabo una formacion que abarcaba: Comandos de GitHub, Html semantico, Vue, Nuxt, Bem , Sass. Además de una prueba técnica que consistia en rezaliar una copia de Twitch mediante Nuxt y la Api propia de Twitch. Todo esto para llevar acabo una migración de las tiendas que tenian en wordPress a Nuxt ",
+      "highlights": ["Alebat Education"]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": ["Awarded 'Volunteer of the Month'"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Intituto Fomento Ocupacional",
+      "url": "https://www.fp-informatica.com/",
+      "area": "Desarrollo de Aplicaciones Web",
+      "studyType": "Grado Superior",
+      "startDate": "2023-09-18",
+      "endDate": "2025-06-04",
+      "score": "7,42",
+      "courses": ["DB1101 - Basic SQL"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Medio",
+      "keywords": ["Desarrollo Web", "Frontend"]
+    },
+    {
+      "name": "CSS",
+      "level": "Medio",
+      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Medio",
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
+    },
+    {
+      "name": "Tailwind",
+      "level": "basico",
+      "keywords": ["Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Medio",
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"]
+    },
+    {
+      "name": "Node",
+      "level": "Medio",
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
+    },
+    {
+      "name": "Git",
+      "level": "Medio",
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
+    },
+    {
+      "name": "GitHub",
+      "level": "Medio",
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente", "Git"]
+    },
+    {
+      "name": "Nuxt.js",
+      "level": "Medio",
+      "keywords": ["Desarrollo Web", "Frontend"]
+    },
+    {
+      "name": "Vue",
+      "level": "Medio",
+      "keywords": ["Desarrollo Web", "Frontend"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Medio"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": ["Ferrets", "Unicorns"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Chef Direct's",
+      "isActive": true,
+      "description": "Plataforma de streaming en directo enfocada a cocina ",
+      "highlights": ["Plataforma dedicada a cocina", "En desarrollo"],
+      "url": "https://prueba-tecnica-cyan-omega.vercel.app/-"
+    }
+  ]
+}
