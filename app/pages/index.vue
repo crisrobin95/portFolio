@@ -1,11 +1,13 @@
 <script setup></script>
 <template>
-  <About class="sobre-mi" />
-  <aside class="actions">
-    <NuxtLink to="/habilidades">
-      <BottonNext label="Habilidades" class="boton" />
-    </NuxtLink>
-  </aside>
+  <div>
+    <About />
+    <aside class="actions">
+      <NuxtLink to="/habilidades">
+        <BottonNext label="Habilidades" />
+      </NuxtLink>
+    </aside>
+  </div>
 </template>
 
 <style lang="scss" scoped>

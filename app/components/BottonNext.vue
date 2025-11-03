@@ -26,6 +26,7 @@ const props = withDefaults(
   font-weight: 600;
   transform: scale(1);
   transition: transform 0.3s ease;
+  border-radius: 1rem;
 
   &:hover {
     background-color: rgb(87, 87, 89);
