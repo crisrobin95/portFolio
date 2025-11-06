@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import Javascript from '~/assets/icons/javascript.vue'
-import BottonNext from '~/components/BottonNext.vue'
-
 useHead({
   title: 'Habilidades',
 })
