@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+useHead({
+  title: 'Inicio',
+})
+</script>
 <template>
   <div>
     <About />
@@ -12,9 +16,11 @@
 
 <style lang="scss" scoped>
 .actions {
+  position: fixed;
+  margin: 1rem;
+  right: 1rem;
+  bottom: 15rem;
   display: flex;
-  justify-content: flex-end;
-  width: 95%;
-  padding: 0 1rem;
+  z-index: 999;
 }
 </style>

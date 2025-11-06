@@ -4,7 +4,7 @@ import cvData from '../locales/cv.json'
 import fondo from '~/assets/fondo-about.jpg'
 
 const cv = cvData
-const subTitulo = 'Bienvenido a mi CV Digital'
+const subTitulo = 'Bienvenid@ a mi Porfolio'
 
 const showParagraph = ref(false)
 function toggleParagraph() {
@@ -34,7 +34,7 @@ function toggleParagraph() {
   </section>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 section {
   @include main.flex(column, $gap: 2rem);
   box-sizing: border-box;
