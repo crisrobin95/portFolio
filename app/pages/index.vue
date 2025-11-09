@@ -22,5 +22,11 @@ useHead({
   bottom: 15rem;
   display: flex;
   z-index: 999;
+  @include main.responsive(50rem) {
+    position: initial;
+    @include main.flex(column, $wrap: wrap, $gap: 1rem);
+  }
 }
+
+@include main.responsive();
 </style>

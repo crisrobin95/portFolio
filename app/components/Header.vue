@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import cvData from '../locales/cv.json'
-import type { Root } from '../types/cv'
 import MailIcon from '../assets/icons/Mail.vue'
 import LinkedIn from '../assets/icons/LinkedIn.vue'
 import GitHub from '~/assets/icons/GitHub.vue'
 import Phone from '~/assets/icons/Phone.vue'
 import Download from '~/assets/icons/Download.vue'
 
-const cv: Root = cvData
+const { cv } = useCvData()
 
 const iconMap = {
   LinkedIn: LinkedIn,
@@ -15,7 +13,7 @@ const iconMap = {
 }
 </script>
 <template>
-  <div class="header">
+  <div v-if="cv" class="header">
     <h1 class="title">{{ cv.basics.name }}</h1>
     <h2>{{ cv.basics.label }}</h2>
     <footer class="pie-cabecera">
@@ -33,7 +31,7 @@ const iconMap = {
 
 <style lang="scss" scoped>
 .header {
-  @include main.flex($justify: space-between, $gap: 5rem);
+  @include main.flex($justify: space-between, $gap: 1rem);
   width: 100%;
   padding: 1rem;
   text-align: center;
@@ -44,6 +42,9 @@ const iconMap = {
   h2 {
     font-size: 1.5rem;
     font-weight: 100;
+  }
+  @include main.responsive(50rem) {
+    @include main.flex(column, $wrap: wrap, $gap: 1rem);
   }
 }
 

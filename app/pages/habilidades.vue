@@ -4,18 +4,21 @@ useHead({
 })
 </script>
 <template>
-  <img src="../assets/fondo-habilidades.webp" alt="" />
   <main>
-    <div class="button-prev">
+    <img src="../assets/fondo-habilidades.webp" alt="" />
+    <aside class="button-prev">
       <NuxtLink to="/experiencia">
         <BottonNext label="Experiencia" />
       </NuxtLink>
-    </div>
-    <div class="button-next">
+    </aside>
+    <section class="card">
+      <CardSkils />
+    </section>
+    <aside class="button-next">
       <NuxtLink to="/">
         <BottonNext label="Sobre Mí" />
       </NuxtLink>
-    </div>
+    </aside>
   </main>
 </template>
 
@@ -25,6 +28,10 @@ img {
   z-index: -1;
   width: 100%;
   height: 90vh;
+}
+
+.card {
+  @include main.flex();
 }
 
 .button-prev {

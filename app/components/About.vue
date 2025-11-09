@@ -1,9 +1,9 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
-import cvData from '../locales/cv.json'
+
 import fondo from '~/assets/fondo-about.jpg'
 
-const cv = cvData
+const { cv } = useCvData()
 const subTitulo = 'Bienvenid@ a mi Porfolio'
 
 const showParagraph = ref(false)
@@ -34,10 +34,11 @@ function toggleParagraph() {
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 section {
   @include main.flex(column, $gap: 2rem);
   box-sizing: border-box;
+  margin-top: 1rem;
   padding: 1rem;
 }
 header {
@@ -45,21 +46,27 @@ header {
 }
 img {
   position: absolute;
+  object-fit: cover;
   z-index: -1;
   width: 100%;
-  height: 90vh;
-  border: solid 1rem black;
+  height: 85%;
+  border: solid 4px black;
+  // transition:
+  //   height 0.5s ease-in-out,
+  //   width 0.5s ease-in-out;
 }
+// .img-expanded {
+//   height: 125dvh;
+// }
 h1 {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 4rem;
-  padding-top: 1rem;
+  font-size: 3rem;
   text-align: center;
 }
 h3 {
   text-decoration: underline solid black;
   background-color: rgba(0, 0, 0, 0.684);
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 1rem;
   cursor: pointer;
   user-select: none;
@@ -67,14 +74,22 @@ h3 {
 p {
   background: rgba(0, 0, 0, 0.647);
   color: white;
-  padding: 5rem;
+  margin-top: 3rem;
+  padding: 1rem;
   text-align: justify;
-  width: 50rem;
+  width: auto;
+  max-width: 50rem;
   border-radius: 1rem;
   font-size: 1.2rem;
+
+  @include main.responsive(50rem) {
+    width: 30rem;
+  }
+  @include main.responsive(35rem) {
+    width: 20rem;
+  }
 }
 
-/* transición para mostrar/ocultar el párrafo */
 .fade-enter-active,
 .fade-leave-active {
   transition:
@@ -92,4 +107,3 @@ p {
   transform: translateY(0);
 }
 </style>
-// ...existing code...
