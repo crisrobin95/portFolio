@@ -90,52 +90,50 @@
     {
       "name": "HTML",
       "level": "Medio",
-      "keywords": ["Desarrollo Web", "Frontend"]
+      "keywords": ["Desarrollo Web", "Frontend"],
+      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev."
     },
     {
       "name": "CSS",
       "level": "Medio",
-      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
+      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"],
+      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev."
     },
     {
       "name": "JavaScript",
       "level": "Medio",
-      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
-    },
-    {
-      "name": "Tailwind",
-      "level": "basico",
-      "keywords": ["Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"]
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"],
+      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev."
     },
     {
       "name": "TypeScript",
       "level": "Medio",
-      "keywords": ["Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"]
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"],
+      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev."
     },
     {
       "name": "Node",
       "level": "Medio",
-      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
-    },
-    {
-      "name": "Git",
-      "level": "Medio",
-      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"],
+      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev. Aprender y poner en practia durante el periodo de prácticas realizado en la empresa Alebat Education"
     },
     {
       "name": "GitHub",
       "level": "Medio",
-      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente", "Git"]
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente", "Git"],
+      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev. Aprender y poner en practia durante el periodo de prácticas realizado en la empresa Alebat Education"
     },
     {
       "name": "Nuxt.js",
       "level": "Medio",
-      "keywords": ["Desarrollo Web", "Frontend"]
+      "keywords": ["Desarrollo Web", "Frontend"],
+      "description": "Realización del curso gratuito del creador de contenido midudev. Aprender y poner en practia durante el periodo de prácticas realizado en la empresa Alebat Education"
     },
     {
       "name": "Vue",
       "level": "Medio",
-      "keywords": ["Desarrollo Web", "Frontend"]
+      "keywords": ["Desarrollo Web", "Frontend"],
+      "description": "Realización del curso gratuito del creador de contenido midudev. Aprender y poner en practia durante el periodo de prácticas realizado en la empresa Alebat Education"
     }
   ],
   "languages": [
