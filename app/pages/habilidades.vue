@@ -27,7 +27,7 @@ img {
   position: absolute;
   z-index: -1;
   width: 100%;
-  height: 90vh;
+  height: 88vh;
 }
 
 .card {
@@ -38,7 +38,7 @@ img {
   position: fixed;
   margin: 1rem;
   right: 1rem;
-  bottom: 15rem;
+  bottom: 1rem;
   display: flex;
   z-index: 999;
 }
@@ -46,7 +46,7 @@ img {
 .button-next {
   position: fixed;
   margin: 1rem;
-  bottom: 15rem;
+  bottom: 1rem;
   display: flex;
   z-index: 999;
 }

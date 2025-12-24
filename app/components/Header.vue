@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import MailIcon from '../assets/icons/Mail.vue'
-import LinkedIn from '../assets/icons/LinkedIn.vue'
+import MailIcon from '~/assets/icons/Mail.vue'
+import LinkedIn from '~/assets/icons/LinkedIn.vue'
 import GitHub from '~/assets/icons/GitHub.vue'
 import Phone from '~/assets/icons/Phone.vue'
 import Download from '~/assets/icons/Download.vue'
@@ -16,7 +16,7 @@ const iconMap = {
   <div v-if="cv" class="header">
     <h1 class="title">{{ cv.basics.name }}</h1>
     <h2>{{ cv.basics.label }}</h2>
-    <footer class="pie-cabecera">
+    <nav class="pie-cabecera">
       <a :href="'https://cv-digital-green.vercel.app/'" title="Descargar"><Download /></a>
       <a :href="`mailto:${cv.basics.email}`" title="Envia email"><MailIcon /></a>
       <a :href="`tel:${cv.basics.phone}`"><Phone /> </a>
@@ -25,7 +25,7 @@ const iconMap = {
           <component :is="iconMap[profile.network as keyof typeof iconMap]" />
         </a>
       </template>
-    </footer>
+    </nav>
   </div>
 </template>
 

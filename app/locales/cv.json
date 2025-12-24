@@ -91,49 +91,57 @@
       "name": "HTML",
       "level": "Medio",
       "keywords": ["Desarrollo Web", "Frontend"],
-      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev."
+      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev.",
+      "img": "/html5.png"
     },
     {
       "name": "CSS",
       "level": "Medio",
       "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"],
-      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev."
+      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev.",
+      "img": "/css.png"
     },
     {
       "name": "JavaScript",
       "level": "Medio",
       "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"],
-      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev."
+      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev.",
+      "img": "/js.png"
     },
     {
       "name": "TypeScript",
       "level": "Medio",
       "keywords": ["Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"],
-      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev."
+      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev.",
+      "img": "/typescript.png"
     },
     {
       "name": "Node",
       "level": "Medio",
       "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"],
-      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev. Aprender y poner en practia durante el periodo de prácticas realizado en la empresa Alebat Education"
+      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev. Aprender y poner en practia durante el periodo de prácticas realizado en la empresa Alebat Education",
+      "img": "/nodejs.png"
     },
     {
       "name": "GitHub",
       "level": "Medio",
       "keywords": ["Control de Versiones", "Colaboración", "Código Fuente", "Git"],
-      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev. Aprender y poner en practia durante el periodo de prácticas realizado en la empresa Alebat Education"
+      "description": "Conocimientos adquiridos en el Curso Desarrollo de Aplicaciones Web. Realización del curso gratuito del creador de contenido midudev. Aprender y poner en practia durante el periodo de prácticas realizado en la empresa Alebat Education",
+      "img": "/github.png"
     },
     {
       "name": "Nuxt.js",
       "level": "Medio",
       "keywords": ["Desarrollo Web", "Frontend"],
-      "description": "Realización del curso gratuito del creador de contenido midudev. Aprender y poner en practia durante el periodo de prácticas realizado en la empresa Alebat Education"
+      "description": "Realización del curso gratuito del creador de contenido midudev. Aprender y poner en practia durante el periodo de prácticas realizado en la empresa Alebat Education",
+      "img": "/nuxt.png"
     },
     {
       "name": "Vue",
       "level": "Medio",
       "keywords": ["Desarrollo Web", "Frontend"],
-      "description": "Realización del curso gratuito del creador de contenido midudev. Aprender y poner en practia durante el periodo de prácticas realizado en la empresa Alebat Education"
+      "description": "Realización del curso gratuito del creador de contenido midudev. Aprender y poner en practia durante el periodo de prácticas realizado en la empresa Alebat Education",
+      "img": "/vue.png"
     }
   ],
   "languages": [

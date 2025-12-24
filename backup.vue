@@ -13,7 +13,7 @@ function prev() {
   activeIndex.value =
     (activeIndex.value - 1 + skillsList.value.length) % skillsList.value.length
 }
-const radius = 300 // distancia desde el centro
+const radius = 350 // distancia desde el centro
 
 function getStyle(i: number) {
   const total = skillsList.value.length
@@ -51,20 +51,7 @@ function getStyle(i: number) {
     </div>
 
     <div class="controls">
-      <button @click="prev">
-        <svg viewBox="0 0 24 24" fill="#fff" class="size-6">
-          <path
-            fill-rule="evenodd"
-            d="M10.72 11.47a.75.75 0 0 0 0 1.06l7.5 7.5a.75.75 0 1 0 1.06-1.06L12.31 12l6.97-6.97a.75.75 0 0 0-1.06-1.06l-7.5 7.5Z"
-            clip-rule="evenodd"
-          />
-          <path
-            fill-rule="evenodd"
-            d="M4.72 11.47a.75.75 0 0 0 0 1.06l7.5 7.5a.75.75 0 1 0 1.06-1.06L6.31 12l6.97-6.97a.75.75 0 0 0-1.06-1.06l-7.5 7.5Z"
-            clip-rule="evenodd"
-          />
-        </svg>
-      </button>
+      <button @click="prev">⟵</button>
       <button @click="next">⟶</button>
     </div>
   </div>
@@ -72,7 +59,7 @@ function getStyle(i: number) {
 
 <style scoped lang="scss">
 .roulette-container {
-  margin-top: 15rem;
+  margin-top: 10rem;
   perspective: 62.5rem;
   width: 100%;
   display: flex;
@@ -115,19 +102,17 @@ h3 {
 }
 
 .controls {
+  margin-top: 1rem;
   display: flex;
   gap: 1rem;
 }
 
 button {
-  width: 5rem;
   padding: 0.5rem 1rem;
   border-radius: 8px;
   background: #242424;
   color: white;
   border: 1px solid #444;
-  font-size: 1rem;
-  font-weight: bold;
   cursor: pointer;
 }
 button:hover {
