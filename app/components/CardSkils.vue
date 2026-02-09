@@ -15,11 +15,12 @@ function prev() {
 }
 const radius = 300 // distancia desde el centro
 
-function getStyle(i: number) {
+function getStyle(i: number | string) {
+  const idx = Number(i)
   const total = skillsList.value.length
-  const angle = (360 / total) * (i - activeIndex.value)
+  const angle = (360 / total) * (idx - activeIndex.value)
 
-  const isActive = i === activeIndex.value
+  const isActive = idx === activeIndex.value
 
   return {
     transform: `
@@ -65,19 +66,33 @@ function getStyle(i: number) {
           />
         </svg>
       </button>
-      <button @click="next">⟶</button>
+      <button @click="next">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .roulette-container {
+  position: relative;
   margin-top: 15rem;
   perspective: 62.5rem;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include main.flex(column);
 }
 .head {
   @include main.flex($gap: 1rem);
@@ -115,14 +130,13 @@ h3 {
 }
 
 .controls {
-  display: flex;
-  gap: 1rem;
+  @include main.flex($gap: 1rem);
 }
 
 button {
   width: 5rem;
   padding: 0.5rem 1rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   background: #242424;
   color: white;
   border: 1px solid #444;
