@@ -20,7 +20,7 @@ useHead({
   margin: 1rem;
   right: 1rem;
   bottom: 15rem;
-  display: flex;
+  @include main.flex();
   z-index: 999;
   @include main.responsive(50rem) {
     position: initial;

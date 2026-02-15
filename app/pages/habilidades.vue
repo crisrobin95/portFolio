@@ -39,7 +39,7 @@ img {
   margin: 1rem;
   right: 1rem;
   bottom: 1rem;
-  display: flex;
+  @include main.flex();
   z-index: 999;
 }
 
@@ -47,7 +47,7 @@ img {
   position: fixed;
   margin: 1rem;
   bottom: 1rem;
-  display: flex;
+  @include main.flex();
   z-index: 999;
 }
 </style>

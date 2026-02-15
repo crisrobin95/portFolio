@@ -130,7 +130,7 @@ h3 {
 }
 
 .controls {
-  @include main.flex($gap: 1rem);
+  @include main.flex($gap: 15rem, $justify: space-evenly);
 }
 
 button {
