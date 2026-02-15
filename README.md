@@ -44,7 +44,7 @@ Soy un desarrollador enfocado en crear experiencias web interactivas y eficiente
 📬 Contacto
 Si quieres contactar conmigo para una oportunidad laboral o colaboración:
 
-LinkedIn: [Tu Perfil de LinkedIn](https://www.linkedin.com/in/cristhianqui%C3%B1onez/)
+LinkedIn: [Mi LinkedIn](https://www.linkedin.com/in/cristhianqui%C3%B1onez/)
 
 Email: crisrobin-95@hotmail.com
 
