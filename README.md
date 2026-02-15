@@ -23,8 +23,7 @@ Este es mi portfolio profesional construido con **Nuxt 4**, diseñado para ser r
 * **Iconos:** Nuxt Icons / Material Design Icons
 
 
-📂 Estructura del Proyecto (Nuxt 4 Structure)
-Plaintext
+📂 Estructura del Proyecto (Nuxt 4 Structure) Plaintext
 ├── assets/             # Imágenes y archivos SCSS globales
 ├── components/         # Componentes reutilizables (Header, Footer, Cards)
 ├── composables/        # Lógica de negocio (useCvData.ts, etc.)
