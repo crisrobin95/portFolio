@@ -53,12 +53,4 @@ GitHub: @tcrisrobin95
 Desarrollado con ❤️ por [Tu Nombre]
 
 
----
 
-### Unos consejos extra para tu GitHub:
-
-1.  **Captura de pantalla:** Te recomiendo añadir una imagen de la web en la sección superior del README. Ayuda mucho a "vender" el proyecto antes de entrar al link.
-2.  **Sección de Proyectos:** Si tienes proyectos específicos que destacar, puedes añadir una tabla en el README con los nombres y una breve descripción.
-3.  **GIF:** A veces un GIF de 5 segundos navegando por la página de `about` (con esas transiciones que tienes) queda genial.
-
-¿Te gustaría que añadiera alguna sección más específica sobre tus estudios o alguna tecnología en particular que quieras resaltar?
