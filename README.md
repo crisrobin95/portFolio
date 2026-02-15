@@ -35,12 +35,11 @@ Plaintext
 
 Sobre mí
 Soy un desarrollador enfocado en crear experiencias web interactivas y eficientes. En este portfolio podrás encontrar:
-
-Resumen Profesional: Mi trayectoria y objetivos.
-
-Proyectos: Selección de trabajos destacados con enlaces a código y demos.
-
-Habilidades: Stack técnico actualizado.
+ - Mi crecimiento en la maquetación con html semántico
+ - Práctica con TypeScript
+ - Implementación de estilos con SASS
+ - Crear componentes reutilizables
+ - Utilizacion de json para introducir el contenido
 
 📬 Contacto
 Si quieres contactar conmigo para una oportunidad laboral o colaboración:
