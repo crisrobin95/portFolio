@@ -16,7 +16,7 @@ Este es mi portfolio profesional construido con **Nuxt 4**, diseñado para ser r
 
 ## 🛠️ Stack Tecnológico
 
-* **Framework:** [Nuxt.js](https://nuxt.com/) (Vue 3 + Composition API)
+* **Framework:** [Nuxt.js](https://nuxt.com/) (Vue 4.2.1 + Composition API)
 * **Lenguaje:** TypeScript
 * **Estilos:** SCSS (Sass) con arquitectura de Mixins y variables.
 * **Despliegue:** Vercel
