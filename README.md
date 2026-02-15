@@ -23,7 +23,8 @@ Este es mi portfolio profesional construido con **Nuxt 4**, diseñado para ser r
 * **Iconos:** Nuxt Icons / Material Design Icons
 
 
-📂 Estructura del Proyecto (Nuxt 4 Structure) Plaintext
+📂 Estructura del Proyecto (Nuxt 4 Structure) 
+Plaintext
 ├── assets/             # Imágenes y archivos SCSS globales
 ├── components/         # Componentes reutilizables (Header, Footer, Cards)
 ├── composables/        # Lógica de negocio (useCvData.ts, etc.)
@@ -31,7 +32,8 @@ Este es mi portfolio profesional construido con **Nuxt 4**, diseñado para ser r
 ├── pages/              # Vistas de la aplicación (index.vue, about.vue...)
 ├── public/             # Archivos estáticos
 └── nuxt.config.ts      # Configuración del framework
-📝 Sobre mí
+
+Sobre mí
 Soy un desarrollador enfocado en crear experiencias web interactivas y eficientes. En este portfolio podrás encontrar:
 
 Resumen Profesional: Mi trayectoria y objetivos.
