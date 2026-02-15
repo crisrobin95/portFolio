@@ -50,7 +50,6 @@ Email: crisrobin-95@hotmail.com
 
 GitHub: @tcrisrobin95
 
-Desarrollado con ❤️ por [Tu Nombre]
 
 
 
