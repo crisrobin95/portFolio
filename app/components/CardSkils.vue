@@ -92,6 +92,7 @@ function getStyle(i: number | string) {
   margin-top: 15rem;
   perspective: 62.5rem;
   width: 100%;
+  max-width: 120rem;
   @include main.flex(column);
 }
 .head {
@@ -121,7 +122,7 @@ h3 {
   padding: 1rem;
   width: 14rem;
   max-width: none;
-  min-height: 9rem;
+  min-height: 10rem;
   border-radius: 1rem;
   border: 1px solid white;
   transition:
