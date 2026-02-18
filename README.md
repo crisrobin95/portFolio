@@ -1,75 +1,55 @@
-# Nuxt Minimal Starter
+# 🚀 Mi Portfolio Personal - Nuxt 4
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Este es mi portfolio profesional construido con **Nuxt 4**, diseñado para ser rápido, minimalista y totalmente responsivo. El proyecto centraliza la información de mi carrera profesional, proyectos y habilidades, sirviendo como mi carta de presentación al mundo.
 
-## Setup
+📍 **Live Demo:** [Visitar Portfolio](https://port-folio-psi-hazel-78.vercel.app/)
 
-Make sure to install dependencies:
+---
 
-```bash
-# npm
-npm install
+## ✨ Características Principales
 
-# pnpm
-pnpm install
+* **⚡ Nuxt 4 (Edge/Latest):** Aprovechando las últimas capacidades del framework de Vue para un rendimiento óptimo.
+* **🎨 Diseño Moderno:** Interfaz limpia con efectos de transición suaves y modo oscuro/claro integrado.
+* **📂 Datos Dinámicos:** Gestión de información profesional mediante composables personalizados (`useCvData`).
+* **📱 Totalmente Responsivo:** Adaptado para una experiencia perfecta en móviles, tablets y escritorio mediante Mixins de SCSS.
+* **🖼️ Multimedia:** Galería de proyectos y secciones visuales optimizadas.
 
-# yarn
-yarn install
+## 🛠️ Stack Tecnológico
 
-# bun
-bun install
-```
+* **Framework:** [Nuxt.js](https://nuxt.com/) (Vue 4.2.1 + Composition API)
+* **Lenguaje:** TypeScript
+* **Estilos:** SCSS (Sass) con arquitectura de Mixins y variables.
+* **Despliegue:** Vercel
+* **Iconos:** Nuxt Icons / Material Design Icons
 
-## Development Server
 
-Start the development server on `http://localhost:3000`:
+📂 Estructura del Proyecto (Nuxt 4 Structure) 
+Plaintext
+├── assets/             # Imágenes y archivos SCSS globales
+├── components/         # Componentes reutilizables (Header, Footer, Cards)
+├── composables/        # Lógica de negocio (useCvData.ts, etc.)
+├── layouts/            # Estructuras de página principales
+├── pages/              # Vistas de la aplicación (index.vue, about.vue...)
+├── public/             # Archivos estáticos
+└── nuxt.config.ts      # Configuración del framework
 
-```bash
-# npm
-npm run dev
+Sobre mí
+Soy un desarrollador enfocado en crear experiencias web interactivas y eficientes. En este portfolio podrás encontrar:
+ - Mi crecimiento en la maquetación con html semántico
+ - Práctica con TypeScript
+ - Implementación de estilos con SASS
+ - Crear componentes reutilizables
+ - Utilizacion de json para introducir el contenido
 
-# pnpm
-pnpm dev
+📬 Contacto
+Si quieres contactar conmigo para una oportunidad laboral o colaboración:
 
-# yarn
-yarn dev
+LinkedIn: [Mi LinkedIn](https://www.linkedin.com/in/cristhianqui%C3%B1onez/)
 
-# bun
-bun run dev
-```
+Email: crisrobin-95@hotmail.com
 
-## Production
+GitHub: @tcrisrobin95
 
-Build the application for production:
 
-```bash
-# npm
-npm run build
 
-# pnpm
-pnpm build
 
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
