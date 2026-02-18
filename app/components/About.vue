@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
+import { ref, onMounted } from 'vue'
 import fondo from '~/assets/fondo-about.jpg'
 
 const { cv } = useCvData()
@@ -10,13 +9,19 @@ const showParagraph = ref(false)
 function toggleParagraph() {
   showParagraph.value = !showParagraph.value
 }
+
+onMounted(() => {
+  setTimeout(() => {
+    showParagraph.value = true
+  }, 1000)
+})
 </script>
 
 <template>
   <img :src="fondo" alt="" />
   <section>
     <header>
-      <h1>Sobre Mí</h1>
+      <h1>{{ cv?.basics?.name }}</h1>
       <h3
         @click="toggleParagraph"
         role="button"
@@ -46,22 +51,19 @@ header {
 }
 img {
   position: absolute;
-  object-fit: cover;
+  max-width: 120rem;
+  width: 98%;
+  height: 80%;
   z-index: -1;
-  width: 100%;
-  height: 85%;
-  border: solid 4px black;
-  // transition:
-  //   height 0.5s ease-in-out,
-  //   width 0.5s ease-in-out;
 }
-// .img-expanded {
-//   height: 125dvh;
-// }
+
 h1 {
   font-family: 'Courier New', Courier, monospace;
   font-size: 3rem;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.684);
+  padding: 0.5rem;
+  border-radius: 1rem;
 }
 h3 {
   text-decoration: underline solid black;
@@ -93,8 +95,8 @@ p {
 .fade-enter-active,
 .fade-leave-active {
   transition:
-    opacity 250ms ease,
-    transform 250ms ease;
+    opacity 1000ms ease,
+    transform 1000ms ease;
 }
 .fade-enter-from,
 .fade-leave-to {
