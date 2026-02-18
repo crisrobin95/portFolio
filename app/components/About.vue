@@ -42,9 +42,11 @@ onMounted(() => {
 <style lang="scss" scoped>
 section {
   @include main.flex(column, $gap: 2rem);
+  width: 100%;
   box-sizing: border-box;
   margin-top: 1rem;
   padding: 1rem;
+  max-width: 120rem;
 }
 header {
   @include main.flex(column, $gap: 2rem);
