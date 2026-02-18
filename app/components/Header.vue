@@ -11,11 +11,29 @@ const iconMap = {
   LinkedIn: LinkedIn,
   GitHub: GitHub,
 }
+
+const route = useRoute()
+
+const routeLabels: Record<string, string> = {
+  index: 'Sobre mí',
+  experiencia: 'Experiencia',
+  habilidades: 'Habilidades',
+}
+
+const pageTitle = computed(() => {
+  const name = route.name ? String(route.name) : ''
+  if (name && routeLabels[name]) {
+    return routeLabels[name]
+  }
+  return name || route.path
+})
 </script>
 <template>
   <div v-if="cv" class="header">
-    <h1 class="title">{{ cv.basics.name }}</h1>
-    <h2>{{ cv.basics.label }}</h2>
+    <NuxtLink to="/" class="label">
+      {{ cv.basics.label }}
+    </NuxtLink>
+    <h1 class="title">{{ pageTitle }}</h1>
     <nav class="pie-cabecera">
       <a :href="'https://cv-digital-green.vercel.app/'" title="Descargar"><Download /></a>
       <a :href="`mailto:${cv.basics.email}`" title="Envia email"><MailIcon /></a>
@@ -37,7 +55,8 @@ const iconMap = {
   text-align: center;
   border-bottom: solid white 0.2rem;
   h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
   }
   h2 {
     font-size: 1.5rem;
@@ -47,7 +66,13 @@ const iconMap = {
     @include main.flex(column, $wrap: wrap, $gap: 1rem);
   }
 }
-
+.label {
+  @include main.flex();
+  width: fit-content;
+  background-color: unset;
+  border: unset;
+  font-size: 1.5rem;
+}
 .pie-cabecera {
   @include main.flex($gap: 1rem);
 }
