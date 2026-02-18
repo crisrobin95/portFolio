@@ -4,7 +4,7 @@ useHead({
 })
 </script>
 <template>
-  <main>
+  <main class="contenedor-habil">
     <img src="../assets/fondo-habilidades.webp" alt="" />
     <aside class="button-prev">
       <NuxtLink to="/experiencia">
@@ -23,11 +23,16 @@ useHead({
 </template>
 
 <style scoped lang="scss">
+.contenedor-habil{
+  max-width: 120rem;
+}
 img {
   position: absolute;
   z-index: -1;
   width: 100%;
-  height: 88vh;
+  max-width: 120rem;
+  height: 80%;
+  max-height: 67.5rem;
 }
 
 .card {
