@@ -4,7 +4,7 @@ useHead({
 })
 </script>
 <template>
-  <div>
+  <div class="contenedor-index">
     <About />
     <aside class="actions">
       <NuxtLink to="/habilidades">
@@ -15,11 +15,13 @@ useHead({
 </template>
 
 <style lang="scss" scoped>
+.contenedor-index{
+  max-width: 120rem;
+  
+}
 .actions {
   position: fixed;
-  margin: 1rem;
   right: 1rem;
-  bottom: 15rem;
   @include main.flex();
   z-index: 999;
   @include main.responsive(50rem) {
