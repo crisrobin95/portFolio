@@ -1,16 +1,16 @@
 <script setup lang="ts">
 const { cv } = useCvData()
 useHead({
-  title: 'Inicio',
+  title: () =>
+    cv.value?.basics?.name ? `${cv.value.basics.name} | Inicio` : 'Cargando...',
   meta: [
     {
       name: 'description',
-      content:
-        'Bienvenid@ a mi portfolio profesional. Conoce mis habilidades y proyectos',
+      content: () => cv.value?.basics?.summary || 'Bienvenid@ a mi porfolio profesional.',
     },
     {
       property: 'og:title',
-      content: 'Porfolio de ' + (cv.value?.basics.name || 'Usuario'),
+      content: () => `Porfolio de ${cv.value?.basics?.name || 'Cristhian'}`,
     },
   ],
 })
