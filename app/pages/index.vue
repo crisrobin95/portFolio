@@ -5,7 +5,8 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Bienvenid@ a mi porfolio profesional. Conoce mis habilidades y proyectos',
+      content:
+        'Bienvenid@ a mi portfolio profesional. Conoce mis habilidades y proyectos',
     },
     {
       property: 'og:title',

@@ -3,7 +3,7 @@ import { ref, onMounted } from 'vue'
 import fondo from '~/assets/fondo-about.jpg'
 
 const { cv } = useCvData()
-const subTitulo = 'Bienvenid@ a mi Porfolio'
+const subTitulo = 'Bienvenid@ a mi Portfolio'
 
 const showParagraph = ref(false)
 function toggleParagraph() {
