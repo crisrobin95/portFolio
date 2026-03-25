@@ -9,7 +9,7 @@ useHead({
     },
     {
       property: 'og:title',
-      content: 'Porfolio de ' + (cv.value?.basics?.name || 'Usuario'),
+      content: 'Porfolio de ' + (cv.value?.basics.name || 'Usuario'),
     },
   ],
 })
