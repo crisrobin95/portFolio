@@ -48,7 +48,7 @@ LinkedIn: [Mi LinkedIn](https://www.linkedin.com/in/cristhianqui%C3%B1onez/)
 
 Email: crisrobin-95@hotmail.com
 
-GitHub: @tcrisrobin95
+GitHub: @crisrobin95
 
 
 
