@@ -1,7 +1,6 @@
 export type Root = {
   basics: Basics
   work: Work[]
-  volunteer: Volunteer[]
   education: Education[]
   awards: Award[]
   certificates: Certificate[]
@@ -41,16 +40,6 @@ export type Profile = {
 
 export type Work = {
   name: string
-  position: string
-  url: string
-  startDate: string
-  endDate: string
-  summary: string
-  highlights: string[]
-}
-
-export type Volunteer = {
-  organization: string
   position: string
   url: string
   startDate: string
