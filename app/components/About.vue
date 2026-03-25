@@ -29,7 +29,11 @@ onUnmounted(() => clearTimeout(timer))
     <header>
       <h1>{{ cv?.basics?.name }}</h1>
       <button
-        :aria-label="'Esconder texto'"
+        :aria-label="
+          showParagraph
+            ? 'Esconder texto de introducción'
+            : 'Mostrar texto de introducción'
+        "
         type="button"
         class="boton-esconder"
         @click="toggleParagraph"
