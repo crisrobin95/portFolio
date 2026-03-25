@@ -33,13 +33,29 @@ const pageTitle = computed(() => {
     <NuxtLink to="/" class="label">
       {{ cv.basics.label }}
     </NuxtLink>
-    <h1 class="title">{{ pageTitle }}</h1>
+    <h2 class="title">{{ pageTitle }}</h2>
     <nav class="pie-cabecera">
-      <a :href="'https://cv-digital-green.vercel.app/'" title="Descargar"><Download /></a>
-      <a :href="`mailto:${cv.basics.email}`" title="Envia email"><MailIcon /></a>
-      <a :href="`tel:${cv.basics.phone}`"><Phone /> </a>
+      <a
+        :href="'https://cv-digital-green.vercel.app/'"
+        title="Descargar"
+        :aria-label="'Ir a descargar mi cv'"
+        ><Download
+      /></a>
+      <a
+        :href="`mailto:${cv.basics.email}`"
+        title="Envia email"
+        :aria-label="'Enviar email'"
+        ><MailIcon
+      /></a>
+      <a :href="`tel:${cv.basics.phone}`" :aria-label="'Llamar a mi número personal'"
+        ><Phone />
+      </a>
       <template v-for="profile in cv.basics.profiles" :key="profile.network">
-        <a :href="profile.url" target="_blank">
+        <a
+          :href="profile.url"
+          :aria-label="'Visitar mi perfil de ' + profile.network"
+          target="_blank"
+        >
           <component :is="iconMap[profile.network as keyof typeof iconMap]" />
         </a>
       </template>
@@ -49,18 +65,13 @@ const pageTitle = computed(() => {
 
 <style lang="scss" scoped>
 .header {
-  @include main.flex($justify: space-between, $gap: 1rem);
+  @include main.flex($justify: space-between, $gap: 0.5rem);
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
   border-bottom: solid white 0.2rem;
-  h1 {
-    font-size: 2rem;
-    text-transform: uppercase;
-  }
   h2 {
-    font-size: 1.5rem;
-    font-weight: 100;
+    font-weight: bold;
   }
   @include main.responsive(50rem) {
     @include main.flex(column, $wrap: wrap, $gap: 1rem);
@@ -78,6 +89,7 @@ const pageTitle = computed(() => {
 }
 a {
   @include main.flex;
+  cursor: pointer;
   border: solid 0.0625rem white;
   padding: 0.5rem;
   background-color: rgba(85, 65, 133, 0.863);
@@ -86,6 +98,11 @@ a {
   * {
     width: 0.9rem;
     height: 0.9rem;
+  }
+
+  &:hover {
+    background-color: chartreuse;
+    border: solid white 0.2rem;
   }
 }
 </style>
