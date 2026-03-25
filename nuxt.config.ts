@@ -3,8 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   css: [
-    '~/assets/styles/reset.scss',
-    './assets/styles/variablesCss.css',
+    '~/assets/styles/global.scss',
     'swiper/css',
     'swiper/css/pagination',
     'swiper/css/navigation',
