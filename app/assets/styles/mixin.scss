@@ -21,10 +21,6 @@
   background-repeat: $repeat;
 }
 
-@mixin gradient($color: map.get($colors, c-black)) {
-  background: linear-gradient(to right, $color 0%, map.get($colors, c-transparent) 100%);
-}
-
 @mixin skeleton() {
   position: absolute;
   top: 0;
