@@ -28,22 +28,23 @@ onUnmounted(() => clearTimeout(timer))
     />
     <header>
       <h1>{{ cv?.basics?.name }}</h1>
-      <h2>
-        <button
-          type="button"
-          class="boton-esconder"
-          @click="toggleParagraph"
-          tabindex="0"
-          @keydown.enter.prevent="toggleParagraph"
-          @keydown.space.prevent="toggleParagraph"
-        >
-          {{ subTitulo }}
-        </button>
-      </h2>
+      <button
+        :aria-label="'Esconder texto'"
+        type="button"
+        class="boton-esconder"
+        @click="toggleParagraph"
+        tabindex="0"
+        @keydown.enter.prevent="toggleParagraph"
+        @keydown.space.prevent="toggleParagraph"
+      >
+        {{ subTitulo }}
+      </button>
     </header>
 
     <transition name="fade">
-      <p v-if="showParagraph && cv?.basics?.summary">{{ cv.basics.summary }}</p>
+      <p v-if="showParagraph && cv?.basics?.summary" class="text-summary">
+        {{ cv.basics.summary }}
+      </p>
     </transition>
   </section>
 </template>
@@ -78,7 +79,7 @@ h1 {
   border-radius: 1rem;
 }
 
-p {
+.text-summary {
   background: rgba(0, 0, 0, 0.647);
   color: white;
   margin-top: 3rem;
@@ -96,10 +97,16 @@ p {
   }
 }
 .boton-esconder {
+  cursor: pointer;
   font-size: 1.5rem;
   border-radius: 1rem;
   padding: 0.5rem;
-  background: rgba(0, 0, 0, 0.647);
+  background: rgba(7, 7, 7, 0.647);
+
+  &:hover {
+    background: var(--c-white);
+    color: var(--c-primary);
+  }
 }
 .fade-enter-active,
 .fade-leave-active {
