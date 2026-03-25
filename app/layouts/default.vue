@@ -4,11 +4,9 @@
     <header class="main-header">
       <Header />
     </header>
-
     <main id="main-content">
       <NuxtPage />
     </main>
-
     <footer class="main-footer">
       <p>© 2026 Mi Portfolio</p>
     </footer>
