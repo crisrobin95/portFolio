@@ -1,5 +1,6 @@
+import type { Root } from '~/types/cv'
 export function useCvData() {
-  const cvData = useState<any | null>('cv-data', () => null)
+  const cvData = useState<Root | null>('cv-data', () => null)
 
   const loadData = async () => {
     if (cvData.value === null) {
