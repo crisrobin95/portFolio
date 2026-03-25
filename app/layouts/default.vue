@@ -20,7 +20,7 @@
 #main-content {
   @include main.flex(column);
   width: 100%;
-  height: 80dvh;
+  min-height: 80dvh;
 }
 .main-header {
   width: 100%;
