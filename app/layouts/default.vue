@@ -27,4 +27,10 @@
   min-height: 0.5dvh;
   max-width: 120rem;
 }
+
+.main-footer {
+  @include main.flex;
+  width: 100%;
+  border-top: solid white 0.2rem;
+}
 </style>
