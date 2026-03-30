@@ -86,6 +86,7 @@ export type Skill = {
   level: string
   keywords: string[]
   img: string
+  description: string
 }
 
 export type Language = {
