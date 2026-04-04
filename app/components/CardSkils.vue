@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ArrowLeft from '~/assets/icons/ArrowLeft.vue'
 import ArrowRigth from '~/assets/icons/ArrowRigth.vue'
+
 const { cv } = useCvData()
 const skillsList = computed(() => cv.value?.skills || [])
 
@@ -19,38 +20,17 @@ function prev() {
     activeIndex.value = (activeIndex.value - 1 + total) % total
   }
 }
-const radius = 450 // distancia desde el centro
+const radius = 450
 
 function getStyle(i: number | string) {
-  const idx = Number(i)
-  const total = skillsList.value.length
-  const angle = (360 / total) * (idx - activeIndex.value)
-
-  const isActive = idx === activeIndex.value
-
-  return {
-    transform: `
-      rotateY(${angle}deg)
-      translateZ(${radius}px)
-      ${isActive ? 'scale(1.15)' : 'scale(0.85)'}
-    `,
-    opacity: isActive ? 1 : 0.2,
-    zIndex: isActive ? 1 : 0.5,
-  }
+  return calculateRouletteStyle(
+    Number(i),
+    activeIndex.value,
+    skillsList.value.length,
+    radius,
+  )
 }
-onMounted(() => {
-  window.addEventListener('keydown', handleKeyDown)
-})
-onUnmounted(() => {
-  window.removeEventListener('keydown', handleKeyDown)
-})
-function handleKeyDown(event: KeyboardEvent) {
-  if (event.key === 'ArrowRight') {
-    next()
-  } else if (event.key === 'ArrowLeft') {
-    prev()
-  }
-}
+useKeyboardNav(next, prev)
 </script>
 
 <template>
@@ -63,7 +43,7 @@ function handleKeyDown(event: KeyboardEvent) {
         :style="getStyle(i)"
       >
         <div class="head">
-          <h3>{{ skill.name }}</h3>
+          <h3 class="head__title">{{ skill.name }}</h3>
           <NuxtImg :src="skill.img" width="65" />
         </div>
         <p class="parrafo">{{ skill?.description }}</p>
@@ -71,7 +51,7 @@ function handleKeyDown(event: KeyboardEvent) {
     </ul>
 
     <div class="controls">
-      <button @click="prev">
+      <button @click="prev" class="controls__buttons">
         <ArrowLeft />
       </button>
       <button @click="next">
@@ -98,6 +78,9 @@ function handleKeyDown(event: KeyboardEvent) {
 .head {
   @include main.flex($gap: 1rem);
   margin-bottom: 1rem;
+  &__title {
+    font-size: 0.9rem;
+  }
 }
 
 .roulette {
@@ -111,17 +94,15 @@ function handleKeyDown(event: KeyboardEvent) {
     height: 6rem;
   }
 }
-h3 {
-  font-size: 0.9rem;
-}
+
 .parrafo {
-  color: var(--c-withe);
+  color: var(--c-white);
   font-size: 0.5rem;
 }
 
 .skill-card {
   position: absolute;
-  color: var(--c-withe);
+  color: var(--c-white);
   background-color: rgb(9, 9, 9);
   padding: 1rem;
   width: 14rem;
