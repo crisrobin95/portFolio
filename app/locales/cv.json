@@ -30,12 +30,31 @@
   "work": [
     {
       "name": "Alebat Education",
-      "position": "Practicas",
-      "url": "",
+      "position": "Prácticas",
+      "url": "https://alebateducation.com",
       "startDate": "2025-03-24",
       "endDate": "2025-06-04",
-      "summary": "Durante las practicas llevamos acabo una formacion que abarcaba: Comandos de GitHub, Html semantico, Vue, Nuxt, Bem , Sass. Además de una prueba técnica que consistia en rezaliar una copia de Twitch mediante Nuxt y la Api propia de Twitch. Todo esto para llevar acabo una migración de las tiendas que tenian en wordPress a Nuxt ",
-      "highlights": ["Alebat Education"]
+      "summary": "Desarrollo de interfaces interactivas y componentes reutilizables utilizando el ecosistema Vue.js y Nuxt.",
+      "highlights": [
+        "Implementación de arquitecturas CSS escalables con SCSS.",
+        "Optimización de rendimiento y SEO técnico en aplicaciones Nuxt.",
+        "Colaboración en equipo bajo metodologías ágiles."
+      ],
+      "isIT": true
+    },
+    {
+      "name": "Varios (Hostelería)",
+      "position": "CocineroCocinero Profesional / Jefe de Partida",
+      "url": "",
+      "startDate": "2022-12-28",
+      "endDate": "2024-10-04",
+      "summary": "Gestión de operaciones en entornos de alta presión, demostrando adaptabilidad y capacidad de resolución de problemas críticos.",
+      "highlights": [
+        "Liderazgo de equipos y coordinación bajo tiempos de entrega estrictos.",
+        "Gestión de inventarios y optimización de recursos.",
+        "Alta capacidad de aprendizaje y resiliencia en entornos dinámicos."
+      ],
+      "isIT": false
     }
   ],
   "education": [
@@ -60,10 +79,14 @@
   ],
   "certificates": [
     {
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
+      "name": "Técnico en Desarrollo de Aplicaciónes Web",
+      "date": "2025-06-19",
+      "issuer": "IES Fomento Ocupacional"
+    },
+    {
+      "name": "Técnico en Dirección de cocina",
+      "date": "2021-06",
+      "issuer": "IES María de Zayas y Sotomayor"
     }
   ],
   "publications": [
