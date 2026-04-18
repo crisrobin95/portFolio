@@ -46,6 +46,7 @@ export type Work = {
   endDate: string
   summary: string
   highlights: string[]
+  isIT: boolean
 }
 
 export type Education = {
