@@ -29,7 +29,7 @@ const titlePage = 'Habilidades Técnicas y Stack Tecnológico de Cristhian Quiñ
     </section>
     <aside class="button-next">
       <NuxtLink to="/experiencia">
-        <BottonNext label="Experienca" />
+        <BottonNext label="Experiencia" />
       </NuxtLink>
     </aside>
   </main>
