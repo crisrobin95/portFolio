@@ -1,6 +1,12 @@
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
+  compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  nitro: {
+    preset: 'vercel',
+    externals: {
+      inline: ['vue', 'vue-router'],
+    },
+  },
 
   css: [
     '~/assets/styles/global.scss',
