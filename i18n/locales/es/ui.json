@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "experience": "Experiencia"
+  },
+  "ui": {
+    "title_about": "Bienvenido/a a mi Portfolio",
+    "title_skills": "Habilidades Técnicas y Stack Tecnológico de Cristhian Quiñonez",
+    "title_cards-skills": "Nivel:",
+    "download_cv": "Descargar mi CV",
+    "send_email": "Enviame un email",
+    "call_me": "Llamar a mi número personal",
+    "next": "Siguiente",
+    "prev": "Anterior"
+  },
+  "seo": {
+    "default_description": "Bienvenida/o a mi porfolio profesional. Aquí conocerás mi trayectoria y habilidades.",
+    "experience_title": "Mi Experiencia Laboral",
+    "skills_title": "Habilidades Técnicas y Stack"
+  }
+}
