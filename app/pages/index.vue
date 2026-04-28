@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { cv } = useCvData()
+const localePath = useLocalePath()
 useHead({
   title: () =>
     cv.value?.basics?.name ? `${cv.value.basics.name} | Inicio` : 'Cargando...',
@@ -19,8 +20,8 @@ useHead({
   <div class="contenedor-index">
     <About />
     <aside class="actions">
-      <NuxtLink to="/habilidades">
-        <BottonNext label="Habilidades" />
+      <NuxtLink :to="$localePath('habilidades')">
+        <BottonNext :label="$t('nav.skills')" />
       </NuxtLink>
     </aside>
   </div>
