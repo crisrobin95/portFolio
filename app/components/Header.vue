@@ -78,7 +78,7 @@ const pageTitle = computed(() => {
     font-weight: bold;
   }
   @include main.responsive(50rem) {
-    @include main.flex(column, $wrap: wrap, $gap: 1rem);
+    @include main.flex(column, $wrap: wrap, $gap: 0.1rem);
   }
 }
 .label {
@@ -90,6 +90,10 @@ const pageTitle = computed(() => {
 }
 .pie-cabecera {
   @include main.flex($gap: 1rem);
+  @include main.responsive(50rem) {
+    padding: 1rem;
+    @include main.flex($gap: 1rem);
+  }
 }
 a {
   @include main.flex;
