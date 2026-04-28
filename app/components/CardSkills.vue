@@ -76,8 +76,9 @@ useKeyboardNav(next, prev)
   @include main.flex(column);
 
   @include main.responsive(50rem) {
-    perspective: 1000rem;
-    @include main.flex();
+    perspective: none;
+    @include main.flex(column);
+    margin-top: 2rem;
   }
 }
 .head {
@@ -100,8 +101,8 @@ useKeyboardNav(next, prev)
   transform-style: preserve-3d;
   transition: transform 0.8s cubic-bezier(0.17, 0.67, 0.47, 1.39);
   @include main.responsive(50rem) {
-    width: 5rem;
-    height: 6rem;
+    transform-style: flat;
+    transform: none;
   }
 }
 
@@ -140,7 +141,7 @@ useKeyboardNav(next, prev)
 .controls {
   @include main.flex($gap: 15rem, $justify: space-evenly);
   @include main.responsive(50rem) {
-    @include main.flex($wrap: wrap);
+    @include main.flex($wrap: wrap, $gap: 0.6rem);
   }
 }
 
