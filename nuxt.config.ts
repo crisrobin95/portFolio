@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     'swiper/css/navigation',
   ],
 
-  modules: ['@nuxt/eslint', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image'],
+  modules: ['@nuxt/eslint', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@nuxtjs/i18n'],
 
   ssr: false,
   experimental: {
@@ -34,5 +34,43 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+
+  i18n: {
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
+    langDir: 'locales',
+    defaultLocale: 'es',
+    locales: [
+      {
+        code: 'es',
+        language: 'es-ES',
+        file: 'es/index.ts',
+      },
+      {
+        code: 'en',
+        language: 'en-US',
+        file: 'en/index.ts',
+      },
+    ],
+    strategy: 'prefix_except_default',
+    customRoutes: 'config',
+    pages: {
+      habilidades: {
+        es: '/habilidades',
+        en: '/skills',
+      },
+      experiencia: {
+        es: '/experiencia',
+        en: '/experience',
+      },
+    },
+  },
+
+  future: {
+    compatibilityVersion: 4,
   },
 })
