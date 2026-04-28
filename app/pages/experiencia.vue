@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const localePath = useLocalePath()
 useHead({
   title: 'Experiencia',
   meta: [
@@ -24,7 +25,7 @@ useHead({
     </section>
 
     <aside class="actions">
-      <NuxtLink to="/">
+      <NuxtLink :to="$localePath('index')">
         <BottonNext label="Proyectos" class="botton-next" />
       </NuxtLink>
     </aside>
