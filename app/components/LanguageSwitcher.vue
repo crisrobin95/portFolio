@@ -31,6 +31,16 @@ const onLanguageChange = async (newLocale: any) => {
   margin-right: 0.5rem;
   border-right: 1px solid rgba(255, 255, 255, 0.3);
   padding-right: 0.5rem;
+
+  @include main.responsive(50rem) {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-right: 0;
+    padding-bottom: 0.5rem;
+    margin-right: 0;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .lang-btn {
@@ -54,18 +64,6 @@ const onLanguageChange = async (newLocale: any) => {
 
   &:hover:not(.active) {
     background-color: rgba(127, 255, 0, 0.3);
-  }
-}
-
-@include main.responsive(50rem) {
-  .language-switcher {
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    padding-right: 0;
-    padding-bottom: 0.5rem;
-    margin-right: 0;
-    width: 100%;
-    justify-content: center;
   }
 }
 </style>
