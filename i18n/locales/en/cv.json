@@ -105,7 +105,7 @@
         "level": "Medio",
         "keywords": ["Web Development", "Frontend"],
         "description": "Knowledge gained on the Web Application Development course. Completion of the free course by the content creator midudev.",
-        "img": "https://skillicons.dev/icons?i=vue"
+        "img": "/html5.png"
       },
       {
         "name": "CSS",
