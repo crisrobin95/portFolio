@@ -1,0 +1,192 @@
+{
+  "cv": {
+    "basics": {
+      "name": "Cristhian Quiñonez Chiriboga",
+      "label": "Front-End Developer",
+      "image": "./src/assets/foto-perfil.webp",
+      "email": "crisrobin-95{'@'}hotmail.com",
+      "phone": "+34 629913434",
+      "url": "https://midu.dev",
+      "summary": "My name is Cristhian Quiñonez, and I live in Madrid. About two years ago, I decided to switch from a career in cooking to the world of web development. I enrolled on an advanced diploma course in Web Application Development and completed it in June 2025. I am looking for an opportunity to learn, gain experience and, above all, devote all my time to developing projects.",
+      "location": {
+        "address": "",
+        "postalCode": "28260",
+        "city": "Madrid",
+        "countryCode": "ES",
+        "region": "Spain"
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": "Cristhian Quiñonez",
+          "url": "https://www.linkedin.com/in/cristhianquiñonez"
+        },
+        {
+          "network": "GitHub",
+          "username": "crisrobin",
+          "url": "https://github.com/crisrobin95"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Alebat Education",
+        "position": "Internships",
+        "url": "https://alebateducation.com",
+        "startDate": "2025-03-24",
+        "endDate": "2025-06-04",
+        "summary": "Development of interactive interfaces and reusable components using the Vue.js and Nuxt ecosystem.",
+        "highlights": [
+          "Implementing scalable CSS architectures with SCSS.",
+          "Performance optimisation and technical SEO in Nuxt applications.",
+          "Team collaboration using agile methodologies."
+        ],
+        "isIT": true
+      },
+      {
+        "name": "Various (Hospitality)",
+        "position": "Professional Chef / Station Chef",
+        "url": "",
+        "startDate": "2022-12-28",
+        "endDate": "2024-10-04",
+        "summary": "Managing operations in high-pressure environments, demonstrating adaptability and the ability to resolve critical issues.",
+        "highlights": [
+          "Team leadership and coordination under tight deadlines",
+          "Inventory management and resource optimisation",
+          "Strong learning ability and resilience in dynamic environments."
+        ],
+        "isIT": false
+      }
+    ],
+    "education": [
+      {
+        "institution": "Intituto Fomento Ocupacional",
+        "url": "https://www.fp-informatica.com/",
+        "area": "Desarrollo de Aplicaciones Web",
+        "studyType": "Grado Superior",
+        "startDate": "2023-09-18",
+        "endDate": "2025-06-04",
+        "score": "7,42",
+        "courses": ["DB1101 - Basic SQL"]
+      }
+    ],
+    "awards": [
+      {
+        "title": "Award",
+        "date": "2014-11-01",
+        "awarder": "Company",
+        "summary": "There is no spoon."
+      }
+    ],
+    "certificates": [
+      {
+        "name": "Técnico en Desarrollo de Aplicaciónes Web",
+        "date": "2025-06-19",
+        "issuer": "IES Fomento Ocupacional"
+      },
+      {
+        "name": "Técnico en Dirección de cocina",
+        "date": "2021-06",
+        "issuer": "IES María de Zayas y Sotomayor"
+      }
+    ],
+    "publications": [
+      {
+        "name": "Publication",
+        "publisher": "Company",
+        "releaseDate": "2014-10-01",
+        "url": "https://publication.com",
+        "summary": "Description…"
+      }
+    ],
+    "skills": [
+      {
+        "name": "HTML",
+        "level": "Medio",
+        "keywords": ["Web Development", "Frontend"],
+        "description": "Knowledge gained on the Web Application Development course. Completion of the free course by the content creator midudev.",
+        "img": "https://skillicons.dev/icons?i=vue"
+      },
+      {
+        "name": "CSS",
+        "level": "Medium",
+        "keywords": ["Web Development", "Frontend", "Responsive design70w"],
+        "description": "Knowledge gained on the Web Application Development course. Completion of the free course by the content creator midudev.",
+        "img": "https://skillicons.dev/icons?i=css"
+      },
+      {
+        "name": "JavaScript",
+        "level": "Medium",
+        "keywords": ["Web Development", "Frontend", "Backend", "Fullstack"],
+        "description": "Knowledge gained on the Web Application Development course. Completion of the free course by the content creator midudev.",
+        "img": "/js.png"
+      },
+      {
+        "name": "TypeScript",
+        "level": "Medium",
+        "keywords": ["Web Development", "Frontend", "Backend", "JavaScript Superset"],
+        "description": "Knowledge gained on the Web Application Development course. Completion of the free course by the content creator midudev.",
+        "img": "/typescript.png"
+      },
+      {
+        "name": "Node",
+        "level": "Medium",
+        "keywords": ["Web Development", "Backend", "JavaScript", "Server"],
+        "description": "Knowledge gained on the Web Application Development course. Completion of the free course by the content creator midudev. To learn and put into practice during the work placement at Alebat Education",
+        "img": "/nodejs.png"
+      },
+      {
+        "name": "GitHub",
+        "level": "Medium",
+        "keywords": ["Version Control", "Collaboration", "Source code", "Git"],
+        "description": "Knowledge gained on the Web Application Development course. Completion of the free course by the content creator midudev. To learn and put into practice during the work placement at Alebat Education",
+        "img": "/github.png"
+      },
+      {
+        "name": "Nuxt.js",
+        "level": "Medium",
+        "keywords": ["Web Development", "Frontend"],
+        "description": "Completion of the free content creator course offered by midudev. Learning and putting this into practice during the work placement at Alebat Education. As well as undertaking this project to practise and continue developing my knowledge",
+        "img": "https://skillicons.dev/icons?i=nuxt"
+      },
+      {
+        "name": "Vue",
+        "level": "Medium",
+        "keywords": ["Web Development", "Front-end"],
+        "description": "Completion of the free content creator course offered by midudev. Learning and putting this into practice during the work placement at Alebat Education",
+        "img": "https://skillicons.dev/icons?i=vue"
+      }
+    ],
+    "languages": [
+      {
+        "language": "Spanish",
+        "fluency": "Native speaker"
+      },
+      {
+        "language": "English",
+        "fluency": "Medio"
+      }
+    ],
+    "interests": [
+      {
+        "name": "Wildlife",
+        "keywords": ["Ferrets", "Unicorns"]
+      }
+    ],
+    "references": [
+      {
+        "name": "Jane Doe",
+        "reference": "Reference…"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Chef Direct's",
+        "isActive": true,
+        "description": "Live streaming platform focused on cooking ",
+        "highlights": ["Platform dedicated to cooking", "Under development"],
+        "url": "https://prueba-tecnica-cyan-omega.vercel.app/-"
+      }
+    ]
+  }
+}
