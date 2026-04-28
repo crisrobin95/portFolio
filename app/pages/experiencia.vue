@@ -41,6 +41,9 @@ useHead({
   @include main.flex();
   padding: 2rem 1rem;
   overflow-x: hidden;
+  @include main.responsive(50rem) {
+    @include main.flex(column);
+  }
 }
 
 .background-img {
