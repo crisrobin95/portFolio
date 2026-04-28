@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const localePath = useLocalePath()
 useHead({
   title: 'Habilidades',
   meta: [
@@ -8,11 +9,11 @@ useHead({
     },
   ],
 })
-const titlePage = 'Habilidades Técnicas y Stack Tecnológico de Cristhian Quiñonez'
+const titlePage = ''
 </script>
 <template>
   <main class="container-skills">
-    <h1 class="sr-only">{{ titlePage }}</h1>
+    <h1 class="sr-only">{{ $t('ui.title_skills') }}</h1>
     <NuxtImg
       src="/fondo-habilidades.webp"
       alt="Fondo de sección habilidades"
@@ -20,16 +21,16 @@ const titlePage = 'Habilidades Técnicas y Stack Tecnológico de Cristhian Quiñ
       loading="lazy"
     />
     <aside class="button-prev">
-      <NuxtLink to="/">
-        <BottonNext label="Sobre mí" />
+      <NuxtLink :to="$localePath('index')">
+        <BottonNext :label="$t('nav.about')" />
       </NuxtLink>
     </aside>
     <section class="card">
-      <CardSkils />
+      <CardSkills />
     </section>
     <aside class="button-next">
-      <NuxtLink to="/experiencia">
-        <BottonNext label="Experiencia" />
+      <NuxtLink :to="$localePath('experiencia')">
+        <BottonNext :label="$t('nav.experience')" />
       </NuxtLink>
     </aside>
   </main>
