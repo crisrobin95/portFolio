@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
 import fondo from '~/assets/fondo-about.jpg'
 
 const { cv } = useCvData()
-const subTitulo = 'Bienvenid@ a mi Portfolio'
+const subTitulo = ''
 
 const showParagraph = ref(false)
 function toggleParagraph() {
@@ -41,7 +40,7 @@ onUnmounted(() => clearTimeout(timer))
         @keydown.enter.prevent="toggleParagraph"
         @keydown.space.prevent="toggleParagraph"
       >
-        {{ subTitulo }}
+        {{ $t('ui.title_about') }}
       </button>
     </header>
 
