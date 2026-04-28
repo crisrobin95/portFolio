@@ -32,5 +32,8 @@
   @include main.flex;
   width: 100%;
   border-top: solid white 0.2rem;
+  @include main.responsive(50rem) {
+    height: 50%;
+  }
 }
 </style>
