@@ -6,6 +6,7 @@ import Phone from '~/assets/icons/Phone.vue'
 import Download from '~/assets/icons/Download.vue'
 
 const { cv } = useCvData()
+const { t } = useI18n()
 
 const iconMap = {
   LinkedIn: LinkedIn,
@@ -14,37 +15,40 @@ const iconMap = {
 
 const route = useRoute()
 
-const routeLabels: Record<string, string> = {
-  index: 'Sobre mí',
-  experiencia: 'Experiencia',
-  habilidades: 'Habilidades',
-}
-
 const pageTitle = computed(() => {
-  const name = route.name ? String(route.name) : ''
-  if (name && routeLabels[name]) {
-    return routeLabels[name]
+  const name = route.name ? String(route.name).split('___')[0] : ''
+
+  const routeKeys: Record<string, string> = {
+    index: 'nav.about',
+    experiencia: 'nav.experience',
+    habilidades: 'nav.skills',
   }
+
+  if (name && routeKeys[name]) {
+    return t(routeKeys[name])
+  }
+
   return name || route.path
 })
 </script>
 <template>
   <div v-if="cv" class="header">
-    <NuxtLink to="/" class="label">
+    <NuxtLink :to="$localePath('index')" class="label">
       {{ cv.basics.label }}
     </NuxtLink>
     <h2 class="title">{{ pageTitle }}</h2>
     <nav class="pie-cabecera">
+      <LanguageSwitcher />
       <a
         :href="'https://cv-digital-green.vercel.app/'"
-        title="Descargar"
+        :title="$t('ui.download_cv')"
         :aria-label="'Ir a descargar mi cv'"
         ><Download
       /></a>
       <a
         :href="`mailto:${cv.basics.email}`"
-        title="Envia email"
-        :aria-label="'Enviar email'"
+        :title="$t('ui.send_email')"
+        :aria-label="$t('ui.send_email')"
         ><MailIcon
       /></a>
       <a :href="`tel:${cv.basics.phone}`" :aria-label="'Llamar a mi número personal'"
@@ -101,8 +105,7 @@ a {
   }
 
   &:hover {
-    background-color: chartreuse;
-    border: solid white 0.2rem;
+    background-color: rgba(128, 255, 0, 0.636);
   }
 }
 </style>
