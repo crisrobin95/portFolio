@@ -39,14 +39,11 @@ const jobList = computed(() => cv.value?.work || [])
 .timeline-section {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
-  background-color: transparent;
 }
 
 .timeline-container {
   position: relative;
   max-width: 70rem;
-  margin: 0 auto;
   height: auto;
 }
 
@@ -54,7 +51,8 @@ const jobList = computed(() => cv.value?.work || [])
   position: absolute;
   left: 50%;
   width: 0.125rem;
-  height: 70dvh;
+  height: 100%;
+  max-height: 25rem;
   background: linear-gradient(to bottom, transparent, #fff, transparent);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
   transform: translateX(-50%);
@@ -90,7 +88,7 @@ const jobList = computed(() => cv.value?.work || [])
 
 .timeline-item {
   width: 50%;
-  padding: 0.5rem;
+  padding: 0.2rem;
   position: relative;
   @include main.flex($justify: flex-end);
   &.is-right {
@@ -104,7 +102,7 @@ const jobList = computed(() => cv.value?.work || [])
   @include main.responsive(50rem) {
     width: 100%;
     justify-content: flex-start;
-    padding-left: 3rem;
+    padding-left: 2rem;
   }
 }
 
@@ -112,12 +110,12 @@ const jobList = computed(() => cv.value?.work || [])
   background: rgba(48, 47, 47, 0.945);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
-  margin: 1rem;
-  padding: 1rem;
+  margin: 0.5rem;
+  padding: 0.75rem;
   border-radius: 1.5rem;
   transition: all 0.4s ease;
   &.card-it {
-    border-color: rgba(190, 247, 2, 0.3);
+    border-color: rgb(190, 247, 2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   }
   &:hover {
@@ -127,17 +125,20 @@ const jobList = computed(() => cv.value?.work || [])
 }
 .role {
   color: rgb(233, 247, 37);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .date {
   color: #e6dbdb;
-  font-family: 'Courier New', Courier, monospace;
   font-size: 1rem;
+}
+.summary {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
 }
 .highlights {
   padding: 1rem;
   li {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #ccc;
     padding: 0.0625rem;
     list-style: circle;
