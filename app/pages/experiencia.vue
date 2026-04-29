@@ -19,6 +19,11 @@ useHead({
       class="background-img"
       loading="lazy"
     />
+    <aside class="actions">
+      <NuxtLink :to="$localePath('habilidades')">
+        <BottonNext :label="$t('nav.skills')" class="botton-next" />
+      </NuxtLink>
+    </aside>
 
     <section class="content">
       <CardExperience />
@@ -34,34 +39,38 @@ useHead({
 
 <style lang="scss" scoped>
 .container-experiencia {
-  position: relative;
   justify-content: center;
-  width: 99%;
-  min-height: 100dvh;
+  width: 100%;
+  height: auto;
+  min-height: 80vh;
   @include main.flex();
-  padding: 2rem 1rem;
-  overflow-x: hidden;
+  padding: 1rem;
   @include main.responsive(50rem) {
     @include main.flex(column);
   }
 }
 
 .background-img {
+  padding: 1rem;
   position: absolute;
   width: 100%;
-  height: 100dvh;
+  height: 85%;
   object-fit: cover;
   z-index: 0;
   opacity: 0.3;
+  @include main.responsive(50rem) {
+    height: 100%;
+  }
 }
 
 .content {
   width: 100%;
+  @include main.flex();
   flex: 1;
 }
 
 .actions {
-  margin-top: 1rem;
+  margin: 1rem;
   z-index: 10;
 }
 </style>
