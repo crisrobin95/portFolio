@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import fondo from '~/assets/fondo-about.jpg'
-
 const { cv } = useCvData()
-const subTitulo = ''
 
 const showParagraph = ref(false)
 function toggleParagraph() {
@@ -20,11 +17,6 @@ onUnmounted(() => clearTimeout(timer))
 
 <template>
   <section class="section-about">
-    <img
-      :src="fondo"
-      alt="Imagen de fondo para la sección Acerca de mí"
-      class="background-img"
-    />
     <header>
       <h1>{{ cv?.basics?.name }}</h1>
       <button
@@ -64,13 +56,6 @@ onUnmounted(() => clearTimeout(timer))
 }
 header {
   @include main.flex(column, $gap: 2rem);
-}
-.background-img {
-  position: absolute;
-  width: 99%;
-  height: 80dvh;
-  z-index: -1;
-  opacity: 80%;
 }
 
 h1 {
