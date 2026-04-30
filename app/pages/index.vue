@@ -1,13 +1,16 @@
 <script setup lang="ts">
 const { cv } = useCvData()
 const localePath = useLocalePath()
+const { t } = useI18n()
 useHead({
   title: () =>
-    cv.value?.basics?.name ? `${cv.value.basics.name} | Inicio` : 'Cargando...',
+    cv.value?.basics?.name
+      ? `${cv.value.basics.name} | ${t('page.home')}`
+      : 'Cargando...',
   meta: [
     {
       name: 'description',
-      content: () => cv.value?.basics?.summary || 'Bienvenid@ a mi porfolio profesional.',
+      content: () => cv.value?.basics?.summary || `${t('seo.default_description')}`,
     },
     {
       property: 'og:title',
@@ -17,9 +20,14 @@ useHead({
 })
 </script>
 <template>
-  <div class="contenedor-index">
-    <About />
-    <aside class="actions">
+  <div class="home-page">
+    <NuxtImg
+      src="/fondo-about.jpg"
+      alt="Imagen de fondo para la sección Acerca de mí"
+      class="home-page__background-img"
+    />
+    <About class="home-page__about" />
+    <aside class="home-page__actions">
       <NuxtLink :to="$localePath('habilidades')">
         <BottonNext :label="$t('nav.skills')" />
       </NuxtLink>
@@ -28,20 +36,26 @@ useHead({
 </template>
 
 <style lang="scss" scoped>
-.contenedor-index {
+.home-page {
   @include main.flex(column, $gap: 1rem);
   position: relative;
   max-width: 120rem;
   width: 100%;
-}
-.actions {
-  position: absolute;
-  right: 1.5rem;
-  z-index: 999;
-  @include main.responsive(50rem) {
-    position: initial;
-    @include main.flex(column, $wrap: wrap, $gap: 1rem);
+  &__background-img {
+    position: absolute;
+    width: 99%;
+    height: 80dvh;
+    opacity: 80%;
+  }
+
+  &__actions {
+    position: absolute;
+    right: 1.5rem;
+    z-index: 999;
+    @include main.responsive(50rem) {
+      position: initial;
+      @include main.flex(column, $wrap: wrap, $gap: 1rem);
+    }
   }
 }
-@include main.responsive();
 </style>
