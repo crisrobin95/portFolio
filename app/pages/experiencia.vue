@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
+const { ui } = useCvData()
 useHead({
   title: 'Experiencia',
   meta: [
@@ -21,7 +22,7 @@ useHead({
     />
     <aside class="actions">
       <NuxtLink :to="$localePath('habilidades')">
-        <BottonNext :label="$t('nav.skills')" class="botton-next" />
+        <BottonNext :label="ui.nav.skills" class="botton-next" />
       </NuxtLink>
     </aside>
 
