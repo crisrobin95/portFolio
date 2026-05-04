@@ -2,7 +2,7 @@
 import ArrowLeft from '~/assets/icons/ArrowLeft.vue'
 import ArrowRigth from '~/assets/icons/ArrowRigth.vue'
 
-const { cv } = useCvData()
+const { cv, ui } = useCvData()
 
 const skillsList = computed(() => cv.value?.skills || [])
 
@@ -48,7 +48,7 @@ useKeyboardNav(next, prev)
           <NuxtImg :src="skill.img" class="icon-leng" />
         </div>
         <div class="conteiner-level">
-          <h4 class="conteiner-level__title-level">{{ $t('ui.title_cards-skills') }}</h4>
+          <h4 class="conteiner-level__title-level">{{ ui.static.title_cards_skills }}</h4>
           <span class="conteiner-level__level">{{ skill?.level }}</span>
         </div>
         <p class="parrafo">{{ skill?.description }}</p>
