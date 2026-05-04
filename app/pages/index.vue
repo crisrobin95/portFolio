@@ -1,16 +1,16 @@
 <script setup lang="ts">
-const { cv } = useCvData()
+const { cv, ui } = useCvData()
 const localePath = useLocalePath()
-const { t } = useI18n()
+
 useHead({
   title: () =>
     cv.value?.basics?.name
-      ? `${cv.value.basics.name} | ${t('page.home')}`
+      ? `${cv.value.basics.name} | ${ui.value?.page?.home}`
       : 'Cargando...',
   meta: [
     {
       name: 'description',
-      content: () => cv.value?.basics?.summary || `${t('seo.default_description')}`,
+      content: () => cv.value?.basics?.summary || `${ui.value?.seo?.default_description}`,
     },
     {
       property: 'og:title',
@@ -29,7 +29,7 @@ useHead({
     <About class="home-page__about" />
     <aside class="home-page__actions">
       <NuxtLink :to="$localePath('habilidades')">
-        <BottonNext :label="$t('nav.skills')" />
+        <BottonNext :label="ui?.nav?.skills" />
       </NuxtLink>
     </aside>
   </div>
