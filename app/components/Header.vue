@@ -5,8 +5,7 @@ import GitHub from '~/assets/icons/GitHub.vue'
 import Phone from '~/assets/icons/Phone.vue'
 import Download from '~/assets/icons/Download.vue'
 
-const { cv } = useCvData()
-const { t } = useI18n()
+const { cv, ui } = useCvData()
 
 const iconMap = {
   LinkedIn: LinkedIn,
@@ -14,18 +13,18 @@ const iconMap = {
 }
 
 const route = useRoute()
+const localePath = useLocalePath()
 
 const pageTitle = computed(() => {
   const name = route.name ? String(route.name).split('___')[0] : ''
 
-  const routeKeys: Record<string, string> = {
-    index: 'nav.about',
-    experiencia: 'nav.experience',
-    habilidades: 'nav.skills',
+  const routeKeys: Record<string, string | undefined> = {
+    index: ui.value?.nav?.about,
+    experiencia: ui.value?.nav?.experience,
+    habilidades: ui.value?.nav?.skills,
   }
-
   if (name && routeKeys[name]) {
-    return t(routeKeys[name])
+    return routeKeys[name]
   }
 
   return name || route.path
@@ -36,22 +35,25 @@ const pageTitle = computed(() => {
     <NuxtLink :to="$localePath('index')" class="label">
       {{ cv.basics.label }}
     </NuxtLink>
-    <h2 class="title">{{ pageTitle }}</h2>
+    <h2 class="header__ title">{{ pageTitle }}</h2>
     <nav class="pie-cabecera">
       <LanguageSwitcher />
       <a
         :href="'https://cv-digital-green.vercel.app/'"
-        :title="$t('ui.download_cv')"
+        :title="ui.static.download_cv"
         :aria-label="'Ir a descargar mi cv'"
         ><Download
       /></a>
       <a
         :href="`mailto:${cv.basics.email}`"
-        :title="$t('ui.send_email')"
-        :aria-label="$t('ui.send_email')"
+        :title="ui.static.send_email"
+        :aria-label="ui.static.send_email"
         ><MailIcon
       /></a>
-      <a :href="`tel:${cv.basics.phone}`" :aria-label="'Llamar a mi número personal'"
+      <a
+        :href="`tel:${cv.basics.phone}`"
+        :title="ui.static.call_me"
+        :aria-label="'Llamar a mi número personal'"
         ><Phone />
       </a>
       <template v-for="profile in cv.basics.profiles" :key="profile.network">
@@ -74,7 +76,8 @@ const pageTitle = computed(() => {
   padding: 0.5rem;
   text-align: center;
   border-bottom: solid white 0.2rem;
-  h2 {
+  &__title {
+    text-transform: uppercase;
     font-weight: bold;
   }
   @include main.responsive(50rem) {
