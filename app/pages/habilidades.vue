@@ -1,7 +1,13 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
+const { cv, ui } = useCvData()
 useHead({
-  title: 'Habilidades',
+  title: () => {
+    const name = cv.value?.basics?.name
+    const pageName = ui.value?.page?.skills
+    return name && pageName ? `${name} | ${pageName}` : 'Habilidades'
+  },
+
   meta: [
     {
       name: 'description',
@@ -13,7 +19,7 @@ const titlePage = ''
 </script>
 <template>
   <main class="container-skills">
-    <h1 class="sr-only">{{ $t('ui.title_skills') }}</h1>
+    <h1 class="sr-only">{{ ui.static.title_skills }}</h1>
     <NuxtImg
       src="/fondo-habilidades.webp"
       alt="Fondo de sección habilidades"
@@ -22,7 +28,7 @@ const titlePage = ''
     />
     <aside class="button-prev">
       <NuxtLink :to="$localePath('index')">
-        <BottonNext :label="$t('nav.about')" />
+        <BottonNext :label="ui?.nav?.about" />
       </NuxtLink>
     </aside>
     <section class="card">
@@ -30,7 +36,7 @@ const titlePage = ''
     </section>
     <aside class="button-next">
       <NuxtLink :to="$localePath('experiencia')">
-        <BottonNext :label="$t('nav.experience')" />
+        <BottonNext :label="ui?.nav?.experience" />
       </NuxtLink>
     </aside>
   </main>
