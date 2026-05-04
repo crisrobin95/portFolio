@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { cv } = useCvData()
+const { cv, ui } = useCvData()
 
 const showParagraph = ref(false)
 function toggleParagraph() {
@@ -17,8 +17,8 @@ onUnmounted(() => clearTimeout(timer))
 
 <template>
   <section class="section-about">
-    <header>
-      <h1>{{ cv?.basics?.name }}</h1>
+    <header class="section-about__header">
+      <h1 class="section-about__title">{{ cv?.basics?.name }}</h1>
       <button
         :aria-label="
           showParagraph
@@ -26,18 +26,18 @@ onUnmounted(() => clearTimeout(timer))
             : 'Mostrar texto de introducción'
         "
         type="button"
-        class="boton-esconder"
+        class="section-about__botton-hide"
         @click="toggleParagraph"
         tabindex="0"
         @keydown.enter.prevent="toggleParagraph"
         @keydown.space.prevent="toggleParagraph"
       >
-        {{ $t('ui.title_about') }}
+        {{ ui.static.title_about }}
       </button>
     </header>
 
     <transition name="fade">
-      <p v-if="showParagraph && cv?.basics?.summary" class="text-summary">
+      <p v-if="showParagraph && cv?.basics?.summary" class="section-about__summary">
         {{ cv.basics.summary }}
       </p>
     </transition>
@@ -53,49 +53,48 @@ onUnmounted(() => clearTimeout(timer))
   margin-top: 1rem;
   max-width: 120rem;
   z-index: 1;
-}
-header {
-  @include main.flex(column, $gap: 2rem);
-}
-
-h1 {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 3rem;
-  text-align: center;
-  padding: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.684);
-  border-radius: 1rem;
-}
-
-.text-summary {
-  background: rgba(0, 0, 0, 0.647);
-  color: white;
-  margin-top: 3rem;
-  text-align: justify;
-  width: auto;
-  max-width: 50rem;
-  border-radius: 1rem;
-  font-size: 1.2rem;
-  padding: 0.5rem;
-  @include main.responsive(50rem) {
-    width: 30rem;
+  &__header {
+    @include main.flex(column, $gap: 2rem);
   }
-  @include main.responsive(35rem) {
-    width: 20rem;
+  &__title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.684);
+    border-radius: 1rem;
   }
-}
-.boton-esconder {
-  cursor: pointer;
-  font-size: 1.5rem;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  background: rgba(7, 7, 7, 0.647);
+  &__botton-hide {
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background: rgba(7, 7, 7, 0.647);
 
-  &:hover {
-    background: var(--c-white);
-    color: var(--c-primary);
+    &:hover {
+      background: var(--c-white);
+      color: var(--c-primary);
+    }
+  }
+  &__summary {
+    background: rgba(0, 0, 0, 0.647);
+    color: white;
+    margin-top: 3rem;
+    text-align: justify;
+    width: auto;
+    max-width: 50rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    @include main.responsive(50rem) {
+      width: 30rem;
+    }
+    @include main.responsive(35rem) {
+      width: 20rem;
+    }
   }
 }
+
 .fade-enter-active,
 .fade-leave-active {
   transition:
