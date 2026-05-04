@@ -1,39 +1,47 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { ui } = useCvData()
+</script>
 <template>
-  <div class="layout-container">
-    <header class="main-header">
+  <div class="main-layout">
+    <header class="main-layout__header">
       <Header />
     </header>
-    <main id="main-content">
+    <main class="main-layout__main">
       <NuxtPage />
     </main>
-    <footer class="main-footer">
-      <p>© 2026 Mi Portfolio</p>
+    <footer class="main-layout__footer">
+      <p class="main-layout__copyright">{{ ui.footer.text_footer }}</p>
     </footer>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.layout-container {
+.main-layout {
   @include main.flex(column, $gap: 1rem);
-}
-#main-content {
-  @include main.flex(column);
-  width: 100%;
-  min-height: 80dvh;
-}
-.main-header {
-  width: 100%;
-  min-height: 0.5dvh;
-  max-width: 120rem;
-}
+  min-height: 100dvh;
+  &__header {
+    width: 100%;
+    min-height: 0.5dvh;
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+  &__main {
+    @include main.flex(column);
+    flex: 1;
+    width: 100%;
+    min-height: 80dvh;
+  }
+  &__footer {
+    @include main.flex;
+    width: 100%;
+    border-top: solid var(--color-border, white) 0.2rem;
 
-.main-footer {
-  @include main.flex;
-  width: 100%;
-  border-top: solid white 0.2rem;
-  @include main.responsive(50rem) {
-    height: 50%;
+    @include main.responsive(50rem) {
+      min-height: 10rem;
+    }
+  }
+  &__copyright {
+    font-size: 1.4rem;
   }
 }
 </style>
