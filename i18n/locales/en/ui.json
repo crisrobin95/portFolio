@@ -1,4 +1,7 @@
 {
+  "page": {
+    "home": "Home"
+  },
   "nav": {
     "about": "About me",
     "skills": "Skills",

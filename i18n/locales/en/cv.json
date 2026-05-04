@@ -102,7 +102,7 @@
     "skills": [
       {
         "name": "HTML",
-        "level": "Medio",
+        "level": "Medium",
         "keywords": ["Web Development", "Frontend"],
         "description": "Knowledge gained on the Web Application Development course. Completion of the free course by the content creator midudev.",
         "img": "/html5.png"

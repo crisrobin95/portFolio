@@ -1,4 +1,7 @@
 {
+  "page": {
+    "home": "Inicio"
+  },
   "nav": {
     "about": "Sobre mí",
     "skills": "Habilidades",
