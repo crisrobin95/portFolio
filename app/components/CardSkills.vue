@@ -21,7 +21,7 @@ function prev() {
     activeIndex.value = (activeIndex.value - 1 + total) % total
   }
 }
-const radius = 450
+const radius = 350
 
 function getStyle(i: number | string) {
   return calculateRouletteStyle(
@@ -69,7 +69,7 @@ useKeyboardNav(next, prev)
 <style scoped lang="scss">
 .roulette-container {
   position: relative;
-  margin-top: 10rem;
+  margin-top: 5rem;
   perspective: 100.5rem;
   width: 100%;
   max-width: 120rem;
