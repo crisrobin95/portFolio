@@ -4,6 +4,7 @@ export interface UiTranslations {
     skills: string
   }
   nav: {
+    menu: string
     about: string
     skills: string
     experience: string
