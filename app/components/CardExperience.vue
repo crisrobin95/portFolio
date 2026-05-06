@@ -75,7 +75,7 @@ const jobList = computed(() => cv.value?.work || [])
     transform: translateX(-50%);
   }
   &.dot-it {
-    background-color: var(--c-white, white);
+    background-color: var(--c-white, rgba(8, 8, 8, 0.329));
     box-shadow:
       0 0 0.75rem var(--c-white),
       0 0 1.25rem var(--c-primary);
@@ -120,7 +120,7 @@ const jobList = computed(() => cv.value?.work || [])
   }
   &:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(0, 0, 0, 0.89);
   }
 }
 .role {
