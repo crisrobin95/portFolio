@@ -31,7 +31,7 @@ useHead({
       </NuxtLink>
     </aside>
     <section class="skills-page__content">
-      <CardSkills />
+      <SkillsRoulette />
     </section>
     <aside class="skills-page__nav skills-page__nav--next">
       <NuxtLink :to="$localePath('experiencia')">
