@@ -34,7 +34,7 @@ const onLanguageChange = async (newLocale: any) => {
 
   @include main.responsive(50rem) {
     border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.3);
     padding-right: 0;
     padding-bottom: 0.5rem;
     margin-right: 0;
