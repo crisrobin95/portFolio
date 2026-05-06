@@ -16,43 +16,39 @@ onUnmounted(() => clearTimeout(timer))
 </script>
 
 <template>
-  <section class="section-about">
-    <header class="section-about__header">
-      <h1 class="section-about__title">{{ cv?.basics?.name }}</h1>
+  <section class="about" aria-labelledby="about-title">
+    <header class="about__header">
+      <h1 id="about-title" class="about__title">{{ cv?.basics?.name }}</h1>
+
       <button
-        :aria-label="
-          showParagraph
-            ? 'Esconder texto de introducción'
-            : 'Mostrar texto de introducción'
-        "
         type="button"
-        class="section-about__botton-hide"
+        class="about__button-toggle"
+        :aria-label="showParagraph ? 'Esconder introducción' : 'Mostrar introducción'"
         @click="toggleParagraph"
-        tabindex="0"
-        @keydown.enter.prevent="toggleParagraph"
-        @keydown.space.prevent="toggleParagraph"
       >
         {{ ui.static.title_about }}
       </button>
     </header>
 
     <transition name="fade">
-      <p v-if="showParagraph && cv?.basics?.summary" class="section-about__summary">
-        {{ cv.basics.summary }}
-      </p>
+      <div v-if="showParagraph && cv?.basics?.summary" class="about__content">
+        <p class="about__summary">
+          {{ cv.basics.summary }}
+        </p>
+      </div>
     </transition>
   </section>
 </template>
 
 <style lang="scss" scoped>
-.section-about {
+.about {
   position: relative;
   @include main.flex(column, $gap: 2rem);
   width: 100%;
   box-sizing: border-box;
   margin-top: 1rem;
   max-width: 120rem;
-  z-index: 1;
+
   &__header {
     @include main.flex(column, $gap: 2rem);
   }
@@ -64,7 +60,7 @@ onUnmounted(() => clearTimeout(timer))
     background-color: rgba(0, 0, 0, 0.684);
     border-radius: 1rem;
   }
-  &__botton-hide {
+  &__button-toggle {
     cursor: pointer;
     font-size: 1.5rem;
     border-radius: 1rem;
@@ -76,7 +72,7 @@ onUnmounted(() => clearTimeout(timer))
       color: var(--c-primary);
     }
   }
-  &__summary {
+  &__content {
     background: rgba(0, 0, 0, 0.647);
     color: white;
     margin-top: 3rem;
