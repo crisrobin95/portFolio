@@ -22,7 +22,7 @@ useHead({
     />
     <aside class="actions">
       <NuxtLink :to="$localePath('habilidades')">
-        <BottonNext :label="ui.nav.skills" class="botton-next" />
+        <BaseButtonNav :label="ui.nav.skills" class="botton-next" />
       </NuxtLink>
     </aside>
 
@@ -32,7 +32,7 @@ useHead({
 
     <aside class="actions">
       <NuxtLink :to="$localePath('index')">
-        <BottonNext label="Proyectos" class="botton-next" />
+        <BaseButtonNav label="Proyectos" class="botton-next" />
       </NuxtLink>
     </aside>
   </main>
@@ -52,13 +52,10 @@ useHead({
 }
 
 .background-img {
-  padding: 1rem;
   position: absolute;
-  width: 100%;
-  height: 85%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.3;
+  width: 99%;
+  height: 80dvh;
+  opacity: 80%;
   @include main.responsive(50rem) {
     height: 100%;
   }
