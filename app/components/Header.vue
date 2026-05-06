@@ -4,6 +4,7 @@ import LinkedIn from '~/assets/icons/LinkedIn.vue'
 import GitHub from '~/assets/icons/GitHub.vue'
 import Phone from '~/assets/icons/Phone.vue'
 import Download from '~/assets/icons/Download.vue'
+import NavBar from './NavBar.vue'
 
 const { cv, ui } = useCvData()
 
@@ -31,34 +32,49 @@ const pageTitle = computed(() => {
 })
 </script>
 <template>
-  <div v-if="cv" class="header">
-    <NuxtLink :to="$localePath('index')" class="label">
-      {{ cv.basics.label }}
-    </NuxtLink>
-    <h2 class="header__ title">{{ pageTitle }}</h2>
-    <nav class="pie-cabecera">
+  <header v-if="cv" class="header">
+    <div class="header__conteiner">
+      <NavBar class="header__navbar" />
+      <NuxtLink :to="$localePath('index')" class="header__label">
+        {{ cv.basics.label }}
+      </NuxtLink>
+    </div>
+    <h1 class="header__title">{{ pageTitle }}</h1>
+
+    <nav class="header__nav" aria-label="Social and contact">
       <LanguageSwitcher />
+
       <a
         :href="'https://cv-digital-green.vercel.app/'"
+        class="header__link"
         :title="ui.static.download_cv"
         :aria-label="'Ir a descargar mi cv'"
-        ><Download
-      /></a>
+      >
+        <Download />
+      </a>
+
       <a
         :href="`mailto:${cv.basics.email}`"
+        class="header__link"
         :title="ui.static.send_email"
         :aria-label="ui.static.send_email"
-        ><MailIcon
-      /></a>
+      >
+        <MailIcon />
+      </a>
+
       <a
         :href="`tel:${cv.basics.phone}`"
+        class="header__link"
         :title="ui.static.call_me"
         :aria-label="'Llamar a mi número personal'"
-        ><Phone />
+      >
+        <Phone />
       </a>
+
       <template v-for="profile in cv.basics.profiles" :key="profile.network">
         <a
           :href="profile.url"
+          class="header__link"
           :aria-label="'Visitar mi perfil de ' + profile.network"
           target="_blank"
         >
@@ -66,7 +82,7 @@ const pageTitle = computed(() => {
         </a>
       </template>
     </nav>
-  </div>
+  </header>
 </template>
 
 <style lang="scss" scoped>
@@ -76,43 +92,58 @@ const pageTitle = computed(() => {
   padding: 0.5rem;
   text-align: center;
   border-bottom: solid white 0.2rem;
+  &__conteiner {
+    flex: 1;
+    @include main.flex($justify: flex-start, $gap: 1rem);
+  }
+
   &__title {
+    flex: 0 1 auto;
+    width: auto;
+    white-space: nowrap;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 1.8rem;
   }
+
+  &__label {
+    @include main.flex();
+    background-color: unset;
+    border: unset;
+    font-size: 1.5rem;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__nav {
+    @include main.flex($justify: flex-end, $gap: 1rem);
+    flex: 1;
+    @include main.responsive(50rem) {
+      padding: 1rem;
+    }
+  }
+
+  &__link {
+    @include main.flex;
+    cursor: pointer;
+    border: solid 0.0625rem white;
+    padding: 0.5rem;
+    background-color: rgba(85, 65, 133, 0.863);
+    border-radius: 3rem;
+    transition: background-color 0.2s ease;
+
+    * {
+      width: 0.9rem;
+      height: 0.9rem;
+    }
+
+    &:hover {
+      background-color: rgba(128, 255, 0, 0.636);
+    }
+  }
+
   @include main.responsive(50rem) {
     @include main.flex(column, $wrap: wrap, $gap: 0.1rem);
-  }
-}
-.label {
-  @include main.flex();
-  width: fit-content;
-  background-color: unset;
-  border: unset;
-  font-size: 1.5rem;
-}
-.pie-cabecera {
-  @include main.flex($gap: 1rem);
-  @include main.responsive(50rem) {
-    padding: 1rem;
-    @include main.flex($gap: 1rem);
-  }
-}
-a {
-  @include main.flex;
-  cursor: pointer;
-  border: solid 0.0625rem white;
-  padding: 0.5rem;
-  background-color: rgba(85, 65, 133, 0.863);
-  border-radius: 3rem;
-
-  * {
-    width: 0.9rem;
-    height: 0.9rem;
-  }
-
-  &:hover {
-    background-color: rgba(128, 255, 0, 0.636);
   }
 }
 </style>
