@@ -42,6 +42,9 @@ const { ui } = useCvData()
   }
   &__copyright {
     font-size: 1.4rem;
+    @include main.responsive(50rem) {
+      font-size: 1rem;
+    }
   }
 }
 </style>
