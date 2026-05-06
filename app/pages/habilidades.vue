@@ -15,92 +15,77 @@ useHead({
     },
   ],
 })
-const titlePage = ''
 </script>
 <template>
-  <main class="container-skills">
+  <main class="skills-page">
     <h1 class="sr-only">{{ ui.static.title_skills }}</h1>
     <NuxtImg
       src="/fondo-habilidades.webp"
       alt="Fondo de sección habilidades"
-      class="background-img"
+      class="skills-page__bg"
       loading="lazy"
     />
-    <aside class="button-prev">
+    <aside class="skills-page__nav skills-page__nav--prev">
       <NuxtLink :to="$localePath('index')">
-        <BottonNext :label="ui?.nav?.about" />
+        <BaseButtonNav :label="ui?.nav?.about" />
       </NuxtLink>
     </aside>
-    <section class="card">
+    <section class="skills-page__content">
       <CardSkills />
     </section>
-    <aside class="button-next">
+    <aside class="skills-page__nav skills-page__nav--next">
       <NuxtLink :to="$localePath('experiencia')">
-        <BottonNext :label="ui?.nav?.experience" />
+        <BaseButtonNav :label="ui?.nav?.experience" />
       </NuxtLink>
     </aside>
   </main>
 </template>
 
 <style scoped lang="scss">
-.container-skills {
-  position: relative;
+.skills-page {
   @include main.flex(column, $gap: 2rem);
   width: 100%;
   box-sizing: border-box;
   max-width: 120rem;
   z-index: 1;
-
-  .background-img {
-    padding-top: 1rem;
+  &__bg {
     position: absolute;
     width: 99%;
-    height: 85dvh;
-    z-index: -1;
-    opacity: 0.8;
+    height: 80dvh;
+    opacity: 80%;
   }
-}
-
-.card {
-  @include main.flex();
-}
-
-.button-next {
-  position: fixed;
-  bottom: 5rem;
-  z-index: 999;
-  @include main.flex();
-  left: 50%;
-  transform: translateX(calc(60rem - 100% - 1rem));
-
-  @include main.responsive(120rem) {
-    left: auto;
-    right: 1rem;
-    transform: none;
+  &__content {
+    @include main.flex();
   }
 
-  @include main.responsive(50rem) {
-    position: initial;
-    margin: 1rem auto;
-  }
-}
+  &__nav {
+    position: fixed;
+    bottom: 5rem;
+    z-index: 999;
+    @include main.flex();
+    &--next {
+      left: 50%;
+      transform: translateX(calc(60rem - 100% - 1rem));
 
-.button-prev {
-  position: fixed;
-  bottom: 5rem;
-  z-index: 999;
-  @include main.flex();
-  left: 50%;
-  transform: translateX(calc(-60rem + 1rem));
-
-  @media (max-width: 120rem) {
-    left: 1rem;
-    transform: none;
-  }
-
-  @include main.responsive(50rem) {
-    position: initial;
-    margin: 1rem auto;
+      @include main.responsive(120rem) {
+        left: auto;
+        right: 1rem;
+        transform: none;
+      }
+    }
+    &--prev {
+      left: 50%;
+      transform: translateX(calc(-60rem + 1rem));
+      @include main.responsive(120rem) {
+        left: 1rem;
+        transform: none;
+      }
+    }
+    @include main.responsive(50rem) {
+      position: initial;
+      margin: 1rem auto;
+      transform: none;
+    }
   }
 }
 </style>
