@@ -29,7 +29,7 @@ useHead({
     <About class="home-page__about" />
     <aside class="home-page__actions">
       <NuxtLink :to="$localePath('habilidades')">
-        <BottonNext :label="ui?.nav?.skills" />
+        <BaseButtonNav :label="ui?.nav?.skills" />
       </NuxtLink>
     </aside>
   </div>
