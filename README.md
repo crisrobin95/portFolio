@@ -28,22 +28,22 @@ Este es mi portfolio profesional construido con **Nuxt 4**, diseñado para ser r
 ```text
 📂 Estructura del Proyecto (Nuxt 4 Structure)
 
-|--app/
+├──app/
     ├── assets/         # Imágenes y archivos SCSS globales
     ├── components/     # Componentes de interfaz reutilizables
     ├── composables/    # Lógica de negocio (useCvData.ts, etc.)
     ├── layouts/        # Estructuras de página principales
     ├── pages/          # Vistas de la aplicación (index.vue, about.vue...)
-    |-- types/          # Definiciones de interfaces y tipos de TypeScript para un flujo de datos seguro.
-    |-- utils/          # Funciones auxiliares y cálculos matemáticos para animaciones 3D.
-    |-- App.vue         # Componente raíz que renderiza los Layouts y las Páginas de la aplicación.
-    |-- error.vue       # Página personalizada para la gestión de errores
+    ├── types/          # Definiciones de interfaces y tipos de TypeScript para un flujo de datos seguro.
+    ├── utils/          # Funciones auxiliares y cálculos matemáticos para animaciones 3D.
+    ├── App.vue         # Componente raíz que renderiza los Layouts y las Páginas de la aplicación.
+    ├── error.vue       # Página personalizada para la gestión de errores
 ├── i18n/               # Sistema de internacionalización (Multi-idioma)
 ├── public/             # Archivos estáticos
 └── nuxt.config.ts      # Configuración del framework
 ```
 
-Sobre mí
+**👨‍💻 Sobre mí**
 Soy un desarrollador enfocado en crear experiencias web interactivas y eficientes. En este portfolio podrás encontrar:
 
 - Mi crecimiento en la maquetación con html semántico
@@ -52,11 +52,11 @@ Soy un desarrollador enfocado en crear experiencias web interactivas y eficiente
 - Crear componentes reutilizables
 - Utilizacion de json para introducir el contenido
 
-📬 Contacto
+**📬 Contacto**
 Si quieres contactar conmigo para una oportunidad laboral o colaboración:
 
-LinkedIn: [Mi LinkedIn](https://www.linkedin.com/in/cristhianqui%C3%B1onez/)
+- LinkedIn: [Mi LinkedIn](https://www.linkedin.com/in/cristhianqui%C3%B1onez/)
 
-Email: crisrobin-95@hotmail.com
+- Email: crisrobin-95@hotmail.com
 
-GitHub: @crisrobin95
+- GitHub: @crisrobin95
