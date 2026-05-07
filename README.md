@@ -13,24 +13,35 @@ Este es mi portfolio profesional construido con **Nuxt 4**, diseñado para ser r
 - **📂 Datos Dinámicos:** Gestión de información profesional mediante composables personalizados (`useCvData`).
 - **📱 Totalmente Responsivo:** Adaptado para una experiencia perfecta en móviles, tablets y escritorio mediante Mixins de SCSS.
 - **🖼️ Multimedia:** Galería de proyectos y secciones visuales optimizadas.
+- **🌍 Multi-idioma** (i18n): Implementación de sistema de traducción dinámica para ofrecer una experiencia global, permitiendo cambiar entre idiomas de forma fluida.
 
 ## 🛠️ Stack Tecnológico
 
 - **Framework:** [Nuxt.js](https://nuxt.com/) (Vue 4.2.1 + Composition API)
-- **Lenguaje:** TypeScript
+- **Lenguaje:** TypeScript para un desarrollo robusto y tipado.
 - **Estilos:** SCSS (Sass) con arquitectura de Mixins y variables.
+- **Metodología BEM:** Estructuración de clases (bloque\_\_elemento--modificador) para garantizar estilos escalables y evitar colisiones.
+- **Internacionalización:** @nuxtjs/i18n para la gestión de diccionarios y localización de rutas.
 - **Despliegue:** Vercel
 - **Iconos:** Nuxt Icons / Material Design Icons
 
+```text
 📂 Estructura del Proyecto (Nuxt 4 Structure)
 
-├── assets/ # Imágenes y archivos SCSS globales
-├── components/ # Componentes reutilizables (Header, Footer, Cards)
-├── composables/ # Lógica de negocio (useCvData.ts, etc.)
-├── layouts/ # Estructuras de página principales
-├── pages/ # Vistas de la aplicación (index.vue, about.vue...)
-├── public/ # Archivos estáticos
-└── nuxt.config.ts # Configuración del framework
+|--app/
+    ├── assets/         # Imágenes y archivos SCSS globales
+    ├── components/     # Componentes de interfaz reutilizables
+    ├── composables/    # Lógica de negocio (useCvData.ts, etc.)
+    ├── layouts/        # Estructuras de página principales
+    ├── pages/          # Vistas de la aplicación (index.vue, about.vue...)
+    |-- types/          # Definiciones de interfaces y tipos de TypeScript para un flujo de datos seguro.
+    |-- utils/          # Funciones auxiliares y cálculos matemáticos para animaciones 3D.
+    |-- App.vue         # Componente raíz que renderiza los Layouts y las Páginas de la aplicación.
+    |-- error.vue       # Página personalizada para la gestión de errores
+├── i18n/               # Sistema de internacionalización (Multi-idioma)
+├── public/             # Archivos estáticos
+└── nuxt.config.ts      # Configuración del framework
+```
 
 Sobre mí
 Soy un desarrollador enfocado en crear experiencias web interactivas y eficientes. En este portfolio podrás encontrar:
