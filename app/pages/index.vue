@@ -7,6 +7,14 @@ useHead({
     cv.value?.basics?.name
       ? `${cv.value.basics.name} | ${ui.value?.page?.home}`
       : 'Cargando...',
+  link: [
+    {
+      rel: 'preload',
+      as: 'image',
+      href: '/fondo-about.webp',
+      fetchpriority: 'high',
+    },
+  ],
   meta: [
     {
       name: 'description',
@@ -22,7 +30,10 @@ useHead({
 <template>
   <div class="home-page">
     <NuxtImg
-      src="/fondo-about.jpg"
+      src="/fondo-about.webp"
+      loading="eager"
+      fetchpriority="high"
+      preload
       alt="Imagen de fondo para la sección Acerca de mí"
       class="home-page__background-img"
     />
