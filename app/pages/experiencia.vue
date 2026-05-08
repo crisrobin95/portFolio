@@ -1,74 +1,91 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
 const { ui } = useCvData()
+
 useHead({
   title: 'Experiencia',
   meta: [
     {
       name: 'description',
-      content: 'Aquí encontraras mí experiencia laboral',
+      content: 'Trayectoria profesional y detalles de mi experiencia laboral.',
     },
   ],
 })
 </script>
 
 <template>
-  <main class="container-experiencia">
+  <main class="experience-page">
     <NuxtImg
       src="/fondo-experiencia.webp"
-      alt="Fondo sección experiencia"
-      class="background-img"
+      alt="Fondo decorativo de la sección experiencia"
+      class="experience-page__bg"
       loading="lazy"
     />
-    <aside class="actions">
+
+    <aside class="experience-page__nav experience-page__nav--prev">
       <NuxtLink :to="$localePath('habilidades')">
-        <BaseButtonNav :label="ui.nav.skills" class="botton-next" />
+        <BaseButtonNav :label="ui.nav.skills" />
       </NuxtLink>
     </aside>
 
-    <section class="content">
-      <CardExperience />
+    <section class="experience-page__content">
+      <ExperienceTimeline />
     </section>
 
-    <aside class="actions">
-      <NuxtLink :to="$localePath('index')">
-        <BaseButtonNav label="Proyectos" class="botton-next" />
+    <aside class="experience-page__nav experience-page__nav--next">
+      <NuxtLink :to="$localePath('proyectos')">
+        <BaseButtonNav label="Proyectos" />
       </NuxtLink>
     </aside>
   </main>
 </template>
 
 <style lang="scss" scoped>
-.container-experiencia {
-  justify-content: center;
+.experience-page {
   width: 100%;
-  height: auto;
   min-height: 80vh;
   @include main.flex();
-  padding: 1rem;
+  box-sizing: border-box;
+  z-index: 1;
   @include main.responsive(50rem) {
     @include main.flex(column);
   }
-}
 
-.background-img {
-  position: absolute;
-  width: 99%;
-  height: 80dvh;
-  opacity: 80%;
-  @include main.responsive(50rem) {
-    height: 100%;
+  &__bg {
+    position: absolute;
+    width: 99%;
+    max-width: 120rem;
+    height: 80dvh;
+    opacity: 0.8;
+    object-fit: cover;
+    z-index: -1;
   }
-}
 
-.content {
-  width: 100%;
-  @include main.flex();
-  flex: 1;
-}
+  &__content {
+    @include main.flex();
+    width: 100%;
+  }
 
-.actions {
-  margin: 1rem;
-  z-index: 10;
+  &__nav {
+    margin: 1rem;
+    z-index: 999;
+    @include main.flex();
+    @include main.responsive(50rem) {
+      position: initial;
+    }
+    &--prev {
+      @include main.responsive(50rem) {
+        left: 2rem;
+      }
+    }
+    &--next {
+      @include main.responsive(50rem) {
+        right: 2rem;
+      }
+    }
+  }
+  @include main.responsive(50rem) {
+    @include main.flex(column);
+  }
 }
 </style>
