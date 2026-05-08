@@ -17,9 +17,12 @@ export default defineNuxtConfig({
 
   modules: ['@nuxt/eslint', '@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@nuxtjs/i18n'],
 
-  ssr: false,
+  ssr: true,
   experimental: {
     payloadExtraction: false,
+  },
+  features: {
+    inlineStyles: true,
   },
   app: {
     head: {
@@ -28,6 +31,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'es',
       },
+
       meta: [{ charset: 'utf-8' }],
     },
   },
