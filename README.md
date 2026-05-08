@@ -43,7 +43,8 @@ Este es mi portfolio profesional construido con **Nuxt 4**, diseñado para ser r
 └── nuxt.config.ts      # Configuración del framework
 ```
 
-**👨‍💻 Sobre mí**
+## 👨‍💻 Sobre mí
+
 Soy un desarrollador enfocado en crear experiencias web interactivas y eficientes. En este portfolio podrás encontrar:
 
 - Mi crecimiento en la maquetación con html semántico
@@ -52,11 +53,12 @@ Soy un desarrollador enfocado en crear experiencias web interactivas y eficiente
 - Crear componentes reutilizables
 - Utilizacion de json para introducir el contenido
 
-**📬 Contacto**
+## 📬 Contacto
+
 Si quieres contactar conmigo para una oportunidad laboral o colaboración:
 
 - LinkedIn: [Mi LinkedIn](https://www.linkedin.com/in/cristhianqui%C3%B1onez/)
 
-- Email: crisrobin-95@hotmail.com
+- Email: [Mi correo](crisrobin-95@hotmail.com)
 
 - GitHub: @crisrobin95
