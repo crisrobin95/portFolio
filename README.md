@@ -47,11 +47,12 @@ Este es mi portfolio profesional construido con **Nuxt 4**, diseñado para ser r
 
 Soy un desarrollador enfocado en crear experiencias web interactivas y eficientes. En este portfolio podrás encontrar:
 
-- Mi crecimiento en la maquetación con html semántico
-- Práctica con TypeScript
-- Implementación de estilos con SASS
-- Crear componentes reutilizables
-- Utilizacion de json para introducir el contenido
+- Mi crecimiento en la maquetación con html semántico.
+- Práctica con TypeScript.
+- Implementación de estilos con SASS.
+- Crear componentes reutilizables.
+- Utilización de json para introducir el contenido.
+- Uso de i18n para traducciones.
 
 ## 📬 Contacto
 
