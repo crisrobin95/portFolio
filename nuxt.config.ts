@@ -77,6 +77,10 @@ export default defineNuxtConfig({
         es: '/experiencia',
         en: '/experience',
       },
+      projects: {
+        es: '/proyectos',
+        en: '/projects',
+      },
     },
   },
 
