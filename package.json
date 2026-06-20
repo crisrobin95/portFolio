@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "prepare": "husky",
+    "prepare": "node .husky/install.mjs",
     "test:run": "vitest run",
     "typecheck": "nuxi typecheck",
     "lint-staged": "lint-staged"
@@ -35,7 +35,8 @@
     "stylelint-config-recommended-vue": "^1.6.1",
     "stylelint-config-standard-scss": "^17.0.0",
     "typescript": "6.0.3",
-    "vite": "8.0.12"
+    "vite": "8.0.12",
+    "vitest": "^4.1.9"
   },
   "packageManager": "pnpm@11.8.0"
 }
