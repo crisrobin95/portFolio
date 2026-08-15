@@ -7,7 +7,9 @@
       "menu": "Páginas",
       "about": "Sobre mí",
       "skills": "Habilidades",
-      "experience": "Experiencia"
+      "experience": "Experiencia",
+      "projects": "Proyectos",
+      "contact": "Contacto"
     },
     "static": {
       "title_about": "Bienvenido/a a mi Portfolio",

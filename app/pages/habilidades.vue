@@ -1,12 +1,7 @@
 <script setup lang="ts">
-const localePath = useLocalePath()
-const { cv, ui } = useCvData()
+const { ui } = useCvData()
 useHead({
-  title: () => {
-    const name = cv.value?.basics?.name
-    const pageName = ui.value?.page?.skills
-    return name && pageName ? `${name} | ${pageName}` : 'Habilidades'
-  },
+  title: `${ui.value?.nav?.skills}`,
 
   meta: [
     {
@@ -43,16 +38,12 @@ useHead({
 
 <style scoped lang="scss">
 .skills-page {
-  @include main.flex(column, $gap: 2rem);
+  @include main.flex($gap: 2rem);
   width: 100%;
-  box-sizing: border-box;
   max-width: 120rem;
   z-index: 1;
   &__bg {
-    position: absolute;
-    width: 99%;
-    height: 80dvh;
-    opacity: 80%;
+    @include main.backgroundImage();
   }
   &__content {
     @include main.flex();

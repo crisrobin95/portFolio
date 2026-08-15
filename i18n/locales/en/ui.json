@@ -8,7 +8,9 @@
       "menu": "Menu",
       "about": "About me",
       "skills": "Skills",
-      "experience": "Experience"
+      "experience": "Experience",
+      "projects": "Projects",
+      "contact": "Contact"
     },
     "static": {
       "title_about": "Welcome to my portfolio",

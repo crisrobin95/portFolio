@@ -6,7 +6,7 @@ const jobList = computed(() => cv.value?.work || [])
 <template>
   <section class="experience-timeline">
     <div class="experience-timeline__container">
-      <div class="experience-timeline__line"></div>
+      <div class="experience-timeline__line" />
 
       <div
         v-for="(job, i) in jobList"
@@ -22,7 +22,7 @@ const jobList = computed(() => cv.value?.work || [])
             { 'experience-timeline__dot--it': job.isIT },
           ]"
           aria-hidden="true"
-        ></div>
+        />
 
         <ExperienceCard :job="job" />
       </div>

@@ -25,12 +25,13 @@ const navLinks = computed(() => [
   { name: ui.value?.nav?.about, path: 'index' },
   { name: ui.value?.nav?.skills, path: 'habilidades' },
   { name: ui.value?.nav?.experience, path: 'experiencia' },
+  { name: ui.value?.nav?.projects, path: '' },
 ])
 </script>
 
 <template>
-  <nav class="navbar" aria-label="Main navigation" ref="navbarRef">
-    <button class="navbar__button" @click="toggleMenu" :aria-expanded="isOpen">
+  <nav ref="navbarRef" class="navbar" aria-label="Main navigation">
+    <button class="navbar__button" :aria-expanded="isOpen" @click="toggleMenu">
       <span :class="['navbar__arrow', { 'navbar__arrow--open': isOpen }]"
         ><Icon name="solar:list-arrow-down-bold" class="navbar__icon"
       /></span>
@@ -123,6 +124,6 @@ const navLinks = computed(() => [
 .dropdown-enter-from,
 .dropdown-leave-to {
   opacity: 0;
-  transform: translateY(-10px);
+  transform: translateY(-0.625rem);
 }
 </style>

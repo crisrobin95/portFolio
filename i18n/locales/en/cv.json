@@ -181,11 +181,40 @@
     ],
     "projects": [
       {
-        "name": "Chef Direct's",
-        "isActive": true,
-        "description": "Live streaming platform focused on cooking ",
-        "highlights": ["Platform dedicated to cooking", "Under development"],
-        "url": "https://prueba-tecnica-cyan-omega.vercel.app/-"
+        "name": "Portfolio 2026",
+        "description": "Mi sitio web personal hecho con Nuxt 3.",
+        "image": "/projects/portfolio.webp",
+        "tech": ["Nuxt", "Vue", "SCSS"],
+        "github": "https://github.com...",
+        "demo": "https://port-folio-psi-hazel-78.vercel.app/",
+        "featured": true
+      },
+      {
+        "name": "CV Digital",
+        "description": "Mi sitio web personal hecho con Nuxt 3.",
+        "image": "/projects/portfolio.webp",
+        "tech": ["Nuxt", "Vue", "SCSS"],
+        "github": "https://github.com...",
+        "demo": "https://cv-digital-green.vercel.app/",
+        "featured": true
+      },
+      {
+        "name": "Libros con Astro",
+        "description": "Mi sitio web personal hecho con Nuxt 3.",
+        "image": "/projects/portfolio.webp",
+        "tech": ["Nuxt", "Vue", "SCSS"],
+        "github": "https://github.com...",
+        "demo": "https://book-astro5.vercel.app/",
+        "featured": true
+      },
+      {
+        "name": "Libros con Astro",
+        "description": "Mi sitio web personal hecho con Nuxt 3.",
+        "image": "/projects/portfolio.webp",
+        "tech": ["Nuxt", "Vue", "SCSS"],
+        "github": "https://github.com...",
+        "demo": "https://prueba-tecnica-cyan-omega.vercel.app/",
+        "featured": true
       }
     ]
   }

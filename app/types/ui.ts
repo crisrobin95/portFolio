@@ -8,6 +8,8 @@ export interface UiTranslations {
     about: string
     skills: string
     experience: string
+    projects: string
+    contact: string
   }
   static: {
     title_about: string

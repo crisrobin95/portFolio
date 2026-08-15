@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ArrowLeft from '../assets/icons/ArrowLeft'
-import ArrowRigth from '../assets/icons/ArrowRigth'
+import ArrowLeft from '../assets/icons/ArrowLeft.vue'
+import ArrowRigth from '../assets/icons/ArrowRigth.vue'
 const { cv, ui } = useCvData()
 const skillsList = computed(() => cv.value?.skills || [])
 

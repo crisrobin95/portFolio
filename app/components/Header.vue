@@ -14,7 +14,6 @@ const iconMap = {
 }
 
 const route = useRoute()
-const localePath = useLocalePath()
 
 const pageTitle = computed(() => {
   const name = route.name ? String(route.name).split('___')[0] : ''
@@ -23,6 +22,7 @@ const pageTitle = computed(() => {
     index: ui.value?.nav?.about,
     experiencia: ui.value?.nav?.experience,
     habilidades: ui.value?.nav?.skills,
+    projects: ui.value?.nav?.projects,
   }
   if (name && routeKeys[name]) {
     return routeKeys[name]
@@ -113,6 +113,11 @@ const pageTitle = computed(() => {
     font-size: 1.5rem;
     color: inherit;
     text-decoration: none;
+    &:hover {
+      padding: 0.12rem;
+      border-radius: 1rem;
+      background-color: rgba(128, 255, 0, 0.636);
+    }
   }
 
   &__nav {

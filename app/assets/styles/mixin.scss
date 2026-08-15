@@ -12,13 +12,22 @@
   gap: $gap;
 }
 
-@mixin backgroundImage($url: null, $position: center, $size: cover, $repeat: no-repeat) {
-  @if $url != null and $url != '' {
-    background-image: url(#{$url});
-  }
-  background-position: $position;
-  background-size: $size;
-  background-repeat: $repeat;
+@mixin backgroundImage(
+  $position: absolute,
+  $width: 98%,
+  $maxWidth: 120rem,
+  $height: 85dvh,
+  $opacity: 0.8,
+  $objectFit: cover,
+  $index: -1
+) {
+  position: $position;
+  width: $width;
+  max-width: $maxWidth;
+  height: $height;
+  opacity: $opacity;
+  object-fit: $objectFit;
+  z-index: $index;
 }
 
 @mixin skeleton() {
@@ -41,8 +50,8 @@
 }
 
 @mixin loader() {
-  width: 4.125px;
-  padding: 0.5px;
+  width: 0.2578rem;
+  padding: 0.0313rem;
   aspect-ratio: 1;
   border-radius: 50%;
   background: var(--c-primary);
@@ -66,13 +75,13 @@
   $button-bg-color: var(--c-static-white),
   $button-hover-bg-color: var(--c-grey-light),
   $button-size: 2.5em,
-  $button-shadow: 0 0.125px 0.3125px rgba(0, 0, 0, 0.3)
+  $button-shadow: 0 0.0078rem 0.0195rem rgba(0, 0, 0, 0.3)
 ) {
   --swiper-pagination-color: #{$pagination-color};
   --swiper-pagination-bullet-inactive-color: #{$bullet-inactive-color};
   --swiper-pagination-bullet-inactive-opacity: 1;
-  --swiper-pagination-bullet-size: 1px;
-  --swiper-pagination-bullet-horizontal-gap: 0.375px;
+  --swiper-pagination-bullet-size: 0.0625rem;
+  --swiper-pagination-bullet-horizontal-gap: 0.0234rem;
   --swiper-button-next-disabled-display: none;
 
   .swiper-button-next,

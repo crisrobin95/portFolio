@@ -1,14 +1,9 @@
 <script setup lang="ts">
-interface Props {
+defineProps<{
   label?: string
   type?: 'button' | 'submit' | 'reset'
-  modifier?: 'primary' | 'secondary' | 'outline'
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  label: 'Siguiente',
-  type: 'button',
-})
+  modifier?: string
+}>()
 </script>
 <template>
   <button
@@ -21,7 +16,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 <style scoped lang="scss">
 .base-button-nav {
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;

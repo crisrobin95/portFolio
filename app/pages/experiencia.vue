@@ -1,9 +1,8 @@
 <script setup lang="ts">
-const localePath = useLocalePath()
 const { ui } = useCvData()
 
 useHead({
-  title: 'Experiencia',
+  title: `${ui.value?.nav?.experience}`,
   meta: [
     {
       name: 'description',
@@ -33,7 +32,7 @@ useHead({
     </section>
 
     <aside class="experience-page__nav experience-page__nav--next">
-      <NuxtLink :to="$localePath('proyectos')">
+      <NuxtLink :to="$localePath('projects')">
         <BaseButtonNav label="Proyectos" />
       </NuxtLink>
     </aside>
@@ -42,9 +41,9 @@ useHead({
 
 <style lang="scss" scoped>
 .experience-page {
-  width: 100%;
-  min-height: 80vh;
   @include main.flex();
+  width: 100%;
+  min-height: 80dvh;
   box-sizing: border-box;
   z-index: 1;
   @include main.responsive(50rem) {
@@ -52,13 +51,7 @@ useHead({
   }
 
   &__bg {
-    position: absolute;
-    width: 99%;
-    max-width: 120rem;
-    height: 80dvh;
-    opacity: 0.8;
-    object-fit: cover;
-    z-index: -1;
+    @include main.backgroundImage();
   }
 
   &__content {
