@@ -28,7 +28,7 @@ Este es mi portfolio profesional construido con **Nuxt 4**, diseñado para ser r
 ```text
 📂 Estructura del Proyecto (Nuxt 4 Structure)
 
-├──app/
+├── app/
     ├── assets/         # Imágenes y archivos SCSS globales
     ├── components/     # Componentes de interfaz reutilizables
     ├── composables/    # Lógica de negocio (useCvData.ts, etc.)
@@ -37,7 +37,7 @@ Este es mi portfolio profesional construido con **Nuxt 4**, diseñado para ser r
     ├── types/          # Definiciones de interfaces y tipos de TypeScript para un flujo de datos seguro.
     ├── utils/          # Funciones auxiliares y cálculos matemáticos para animaciones 3D.
     ├── App.vue         # Componente raíz que renderiza los Layouts y las Páginas de la aplicación.
-    ├── error.vue       # Página personalizada para la gestión de errores
+    └── error.vue       # Página personalizada para la gestión de errores
 ├── i18n/               # Sistema de internacionalización (Multi-idioma)
 ├── public/             # Archivos estáticos
 └── nuxt.config.ts      # Configuración del framework

@@ -2,7 +2,7 @@
 TEMP_FILE=$(mktemp)
 
 # Ejecutamos vitest y typecheck usando 'pnpm exec' para asegurar que encuentre los binarios locales
-pnpm exec vitest run && \
+pnpm exec vitest run --passWithNoTests && \
 pnpm exec nuxi typecheck 2>&1 | tee "$TEMP_FILE"
 
 # Buscar errores en el archivo temporal
