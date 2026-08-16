@@ -107,8 +107,11 @@ export type Reference = {
 
 export type Project = {
   name: string
+  demo: string
+  github: string
   isActive: boolean
   description: string
   highlights: string[]
   url: string
+  featured: boolean
 }

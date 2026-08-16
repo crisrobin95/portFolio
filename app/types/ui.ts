@@ -20,6 +20,8 @@ export interface UiTranslations {
     call_me: string
     next: string
     prev: string
+    viewCode: string
+    viewDemo: string
   }
   seo: {
     default_description: string

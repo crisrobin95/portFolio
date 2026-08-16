@@ -20,7 +20,9 @@
       "send_email": "Send me an email",
       "call_me": "Call my personal number",
       "next": "Next",
-      "prev": "Previous"
+      "prev": "Previous",
+      "viewCode": "View Code",
+      "viewDemo": "View Demo"
     },
     "seo": {
       "default_description": "Welcome to my professional portfolio. Here you can find out about my career and skills.",

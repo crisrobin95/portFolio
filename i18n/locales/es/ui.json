@@ -19,7 +19,9 @@
       "send_email": "Enviame un email",
       "call_me": "Llama a mi número personal",
       "next": "Siguiente",
-      "prev": "Anterior"
+      "prev": "Anterior",
+      "viewCode": "Ver Código",
+      "viewDemo": "Ver Demo"
     },
     "seo": {
       "default_description": "Bienvenida/o a mi porfolio profesional. Aquí conocerás mi trayectoria y habilidades.",

@@ -181,8 +181,8 @@
     ],
     "projects": [
       {
-        "name": "Portfolio 2026",
-        "description": "Mi sitio web personal hecho con Nuxt 4.",
+        "name": "Portfolio Personal",
+        "description": "Sitio web profesional e interactivo enfocado en rendimiento, internacionalización (i18n) y arquitectura CSS escalable.",
         "image": "/projects/portfolio.webp",
         "tech": ["Nuxt", "Vue", "SCSS", "typescript", "Node"],
         "github": "https://github.com/crisrobin95/portFolio",
@@ -190,40 +190,31 @@
         "featured": true
       },
       {
-        "name": "CV Digital",
-        "description": "Mi CV digital descargable en formato PDF para complementar mi Portfolio",
+        "name": "CV Digital Interactivo",
+        "description": "Curriculum vitae web optimizado para maquetación e impresión en PDF mantención de diseño fiel y responsive.",
         "image": "/projects/portfolio.webp",
         "tech": ["Nuxt", "Vue", "SCSS", "Node"],
         "github": "https://github.com/crisrobin95/cv-digital",
         "demo": "https://cv-digital-green.vercel.app/",
-        "featured": true
+        "featured": false
       },
       {
-        "name": "Libros con Astro",
-        "description": "Página donde realizo una practica rapida para entender Astro",
+        "name": "Catálogo de Libros en Astro",
+        "description": "Aplicación web enfocada en velocidad de carga extrema, renderizado estático y transiciones de página fluidas.",
         "image": "/projects/portfolio.webp",
         "tech": ["Astro", "JavaScript", "CSS", "Node"],
         "github": "https://github.com/crisrobin95/Book-astro5",
         "demo": "https://book-astro5.vercel.app/",
-        "featured": true
+        "featured": false
       },
       {
-        "name": "Libros con Astro",
-        "description": "Mi sitio web personal hecho con Nuxt 3.",
+        "name": "E-Commerce / Dashboard Demo",
+        "description": "Prueba técnica enfocada en consumo de APIs, manejo de estado global y buenas prácticas de UI/UX.",
         "image": "/projects/portfolio.webp",
         "tech": ["Nuxt", "Vue", "SCSS", "Node"],
-        "github": "https://github.com...",
+        "github": "https://github.com/crisrobin95/pruebaTecnica",
         "demo": "https://prueba-tecnica-cyan-omega.vercel.app/",
-        "featured": true
-      },
-      {
-        "name": "Prueba técnica",
-        "description": "Prueba técnica realizada en las práctica.",
-        "image": "/projects/portfolio.webp",
-        "tech": ["Nuxt", "Vue", "SCSS", "Node"],
-        "github": "https://github.com...",
-        "demo": "https://prueba-tecnica-cyan-omega.vercel.app/",
-        "featured": true
+        "featured": false
       }
     ]
   }

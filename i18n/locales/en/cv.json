@@ -181,40 +181,40 @@
     ],
     "projects": [
       {
-        "name": "Portfolio 2026",
-        "description": "Mi sitio web personal hecho con Nuxt 3.",
+        "name": "Personal Portfolio",
+        "description": "Professional, interactive website focused on performance, internationalization (i18n), and scalable CSS architecture.",
         "image": "/projects/portfolio.webp",
-        "tech": ["Nuxt", "Vue", "SCSS"],
-        "github": "https://github.com...",
+        "tech": ["Nuxt", "Vue", "SCSS", "typescript", "Node"],
+        "github": "https://github.com/crisrobin95/portFolio",
         "demo": "https://port-folio-psi-hazel-78.vercel.app/",
         "featured": true
       },
       {
-        "name": "CV Digital",
-        "description": "Mi sitio web personal hecho con Nuxt 3.",
+        "name": "Interactive Digital CV",
+        "description": "Web-based CV optimized for PDF layout and printing, maintaining a faithful and responsive design.",
         "image": "/projects/portfolio.webp",
-        "tech": ["Nuxt", "Vue", "SCSS"],
-        "github": "https://github.com...",
+        "tech": ["Nuxt", "Vue", "SCSS", "Node"],
+        "github": "https://github.com/crisrobin95/cv-digital",
         "demo": "https://cv-digital-green.vercel.app/",
-        "featured": true
+        "featured": false
       },
       {
-        "name": "Libros con Astro",
-        "description": "Mi sitio web personal hecho con Nuxt 3.",
+        "name": "Catalog of Books on Astro",
+        "description": "Web application focused on extreme load speeds, static rendering, and fluid page transitions.",
         "image": "/projects/portfolio.webp",
-        "tech": ["Nuxt", "Vue", "SCSS"],
-        "github": "https://github.com...",
+        "tech": ["Astro", "JavaScript", "CSS", "Node"],
+        "github": "https://github.com/crisrobin95/Book-astro5",
         "demo": "https://book-astro5.vercel.app/",
-        "featured": true
+        "featured": false
       },
       {
-        "name": "Libros con Astro",
-        "description": "Mi sitio web personal hecho con Nuxt 3.",
+        "name": "E-Commerce / Dashboard Demo",
+        "description": "Technical assessment focused on API consumption, global state management, and UI/UX best practices.",
         "image": "/projects/portfolio.webp",
-        "tech": ["Nuxt", "Vue", "SCSS"],
-        "github": "https://github.com...",
+        "tech": ["Nuxt", "Vue", "SCSS", "Node"],
+        "github": "https://github.com/crisrobin95/pruebaTecnica",
         "demo": "https://prueba-tecnica-cyan-omega.vercel.app/",
-        "featured": true
+        "featured": false
       }
     ]
   }
