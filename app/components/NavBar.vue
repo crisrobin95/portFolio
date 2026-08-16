@@ -25,7 +25,7 @@ const navLinks = computed(() => [
   { name: ui.value?.nav?.about, path: 'index' },
   { name: ui.value?.nav?.skills, path: 'habilidades' },
   { name: ui.value?.nav?.experience, path: 'experiencia' },
-  { name: ui.value?.nav?.projects, path: '' },
+  { name: ui.value?.nav?.projects, path: 'projects' },
 ])
 </script>
 
