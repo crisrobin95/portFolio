@@ -50,7 +50,7 @@ useHead({
   width: 100%;
   z-index: 1;
   @include main.responsive(50rem) {
-    @include main.flex(column);
+    @include main.flex(column, $gap: 1rem);
   }
   &__bg {
     @include main.backgroundImage();

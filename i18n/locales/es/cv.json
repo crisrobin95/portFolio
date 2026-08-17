@@ -193,7 +193,7 @@
         "name": "CV Digital Interactivo",
         "description": "Curriculum vitae web optimizado para maquetación e impresión en PDF mantención de diseño fiel y responsive.",
         "image": "/projects/portfolio.webp",
-        "tech": ["Nuxt", "Vue", "SCSS", "Node"],
+        "tech": ["Astro", "JavaScript", "CSS"],
         "github": "https://github.com/crisrobin95/cv-digital",
         "demo": "https://cv-digital-green.vercel.app/",
         "featured": false

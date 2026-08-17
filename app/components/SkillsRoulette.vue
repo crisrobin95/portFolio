@@ -5,10 +5,11 @@ const { cv, ui } = useCvData()
 const skillsList = computed(() => cv.value?.skills || [])
 
 const { activeIndex, next, prev, getStyle } = useRoulette(skillsList)
+const { handleTouchStart, handleTouchEnd } = useSwipe(next, prev)
 </script>
 
 <template>
-  <div class="skills-roulette">
+  <div class="skills-roulette" @touchstart="handleTouchStart" @touchend="handleTouchEnd">
     <ul class="skills-roulette__list">
       <li
         v-for="(skill, i) in skillsList"
