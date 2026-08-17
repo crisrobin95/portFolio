@@ -78,5 +78,8 @@ useHead({
       transform: none;
     }
   }
+  @include main.responsive(30rem) {
+    @include main.flex(column, $gap: 3rem);
+  }
 }
 </style>
