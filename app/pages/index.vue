@@ -3,14 +3,6 @@ const { cv, ui } = useCvData()
 
 useHead({
   title: `${ui.value?.page?.home}`,
-  link: [
-    {
-      rel: 'preload',
-      as: 'image',
-      href: '/fondo-about.webp',
-      fetchpriority: 'high',
-    },
-  ],
   meta: [
     {
       name: 'description',
@@ -29,7 +21,6 @@ useHead({
       src="/fondo-about.webp"
       loading="eager"
       fetchpriority="high"
-      preload
       alt="Imagen de fondo para la sección Acerca de mí"
       class="home-page__bg"
     />
